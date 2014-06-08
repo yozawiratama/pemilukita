@@ -1,16 +1,14 @@
 Template.versus.created = function () {};
 Template.versus.rendered = function () {
     $('.vote-bar').sticky({
-        bottomSpacing: 100
+        topSpacing : window.innerHeight - 70
     });
     $('.cover').css('height', window.innerHeight); 
 };
 Template.versus.events({
     'click .nav-down': function (e) {
         e.preventDefault();
-        $(window).scrollTo('.info', 1000, {
-            offset: -10
-        });
+        $(window).scrollTo('.info', 1000);
     },
     'click #btnBukaPrabowo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
