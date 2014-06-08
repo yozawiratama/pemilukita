@@ -4,6 +4,7 @@ Template.versus.events({
     'click #btnBukaPrabowo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[3]);
+        console.log(data);
     },
     'click #btnBukaHatta': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
@@ -18,6 +19,9 @@ Template.versus.events({
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[1]);
         
+    },
+    'click #btnVote1' : function(){
+    
     }
 });
 
