@@ -37,5 +37,11 @@ Template.modal_kebijakan_privasi.events({
             $('#btnLoginOnModal').removeAttr('disabled');
         else
             $('#btnLoginOnModal').attr('disabled', 'disabled');
+    },
+    'click #btnLoginOnModal': function () {
+        Meteor.loginWithGoogle(function (err) {
+            if (err)
+                alert(err.message);
+        });
     }
 });
