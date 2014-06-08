@@ -4,22 +4,20 @@ Template.versus.events({
     'click #btnBukaPrabowo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[3]);
-        $('.leftpage').removeClass('leftpage-hide');
     },
     'click #btnBukaHatta': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[0]);
-        $('.leftpage').removeClass('leftpage-hide');
     },
     'click #btnBukaJokowi': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[2]);
-        $('.rightpage').removeClass('rightpage-hide');
+        
     },
     'click #btnBukaJK': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[1]);
-        $('.rightpage').removeClass('rightpage-hide');
+        
     }
 });
 
