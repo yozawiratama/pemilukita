@@ -1,0 +1,26 @@
+.leftpage {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background-color: red;
+}
+.leftpage-hide {
+    left: -90%;
+}
+.rightpage {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    min-height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    background-color: blue;
+}
+.rightpage-hide {
+    right: -90%;
+}
