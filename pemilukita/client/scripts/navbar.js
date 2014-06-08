@@ -6,6 +6,9 @@ Template.navbar.events({
             if (err)
                 alert(err.message);
         });
+    },
+    'click #btnLogout': function () {
+        Meteor.logout();
     }
 });
 

@@ -28,9 +28,13 @@
                 </div>
                 
             </div>
+            {{#if IsVoted}}
+            
+            {{else}}
             <div class="col-md-12">
-                <button id="btnVote1" class="btn btn-default btn-block">Vote</button>
+                <button id="btnVote1" class="btn btn-default btn-block" data-target="#mdlCoblos" data-toggle="modal">Coblos</button>
             </div>
+            {{/if}}
         </div>
         <div class="col-md-6">
             <div class="col-md-12">
@@ -60,9 +64,13 @@
                 </div>
                 
             </div>
+            {{#if IsVoted}}
+            
+            {{else}}
             <div class="col-md-12">
-                <button id="btnVote2" class="btn btn-default btn-block">Vote</button>
+                <button id="btnVote2" class="btn btn-default btn-block" data-target="#mdlCoblos" data-toggle="modal">Coblos</button>
             </div>
+            {{/if}}
         </div>
     </div>
 </template>

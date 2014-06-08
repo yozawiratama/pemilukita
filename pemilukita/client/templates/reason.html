@@ -1,0 +1,9 @@
+<template name="reason">
+    <div>
+        <p class="lead">"{{Reason}}"</p>
+        {{#if IsOwn}}
+        {{else}}
+        <button id="btnVoteUp" class="btn btn-default">up</button>
+        {{/if}}
+    </div>
+</template>

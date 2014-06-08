@@ -1,7 +1,8 @@
 <template name="navbar">
     {{#if IsLoggedIn}}
-    {{ActiveUsername}}
+    {{ActiveUsername}} <button id="btnLogout" class="btn btn-danger">Logout</button>
     {{else}}
-    <button id="btnLogin" class="btn btn-danger">Login with google</button>
+    <button data-target="#mdlLoginTerms" data-toggle="modal" class="btn btn-danger">Login with google</button>
+    {{>modal_kebijakan_privasi}}
     {{/if}}
 </template>

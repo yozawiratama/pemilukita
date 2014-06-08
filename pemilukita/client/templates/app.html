@@ -1,5 +1,14 @@
 <template name="app">
-    {{>navbar}}
-    {{>versus}}
+    {{>navbar}} {{>versus}}
+    <div class="container">
+        <div class="col-md-6">
+            {{#each SatuReasons}} {{>reason}} {{/each}}
+        </div>
+        <div class="col-md-6">
+            {{#each DuaReasons}} {{>reason}} {{/each}}
+        </div>
+
+    </div>
     {{>modal_candidate_info}}
+    {{>modal_coblos}}
 </template>

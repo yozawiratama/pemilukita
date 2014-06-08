@@ -13,15 +13,18 @@ Template.versus.events({
     'click #btnBukaJokowi': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[2]);
-        
+
     },
     'click #btnBukaJK': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[1]);
-        
+
     },
-    'click #btnVote1' : function(){
-    
+    'click #btnVote1': function () {
+        Session.set(SessionRef.Name.SelectedCandidateID, 1);
+    },
+    'click #btnVote2': function () {
+        Session.set(SessionRef.Name.SelectedCandidateID, 2);
     }
 });
 
@@ -48,4 +51,11 @@ Template.versus.RoleJK = function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         return data.caleg[1].role;
     }
+};
+Template.versus.IsVoted = function () {
+    if (CandidateVotes.find({
+        User_ID: Meteor.userId()
+    }).count() > 0) {
+        return true;
+    } else return false;
 };

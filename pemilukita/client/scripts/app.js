@@ -7,3 +7,10 @@ Template.app.rendered = function () {
 Template.app.events({
 
 });
+
+Template.app.SatuReasons = function(){
+    return CandidateVotes.find({Candidate_ID : 1});
+}
+Template.app.DuaReasons = function(){
+    return CandidateVotes.find({Candidate_ID : 2});
+}
