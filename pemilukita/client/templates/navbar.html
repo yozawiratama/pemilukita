@@ -1,3 +1,7 @@
 <template name="navbar">
+    {{#if IsLoggedIn}}
+    {{ActiveUsername}}
+    {{else}}
     <button id="btnLogin" class="btn btn-danger">Login with google</button>
+    {{/if}}
 </template>
