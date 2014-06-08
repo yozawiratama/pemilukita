@@ -1,6 +1,17 @@
 Template.versus.created = function () {};
-Template.versus.rendered = function () {};
+Template.versus.rendered = function () {
+    $('.vote-bar').sticky({
+        bottomSpacing: 100
+    });
+    $('.cover').css('height', window.innerHeight); 
+};
 Template.versus.events({
+    'click .nav-down': function (e) {
+        e.preventDefault();
+        $(window).scrollTo('.info', 1000, {
+            offset: -10
+        });
+    },
     'click #btnBukaPrabowo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[3]);

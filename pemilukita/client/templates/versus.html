@@ -1,76 +1,134 @@
 <template name="versus">
-    <div class="container">
-        <div class="col-md-6">
-            <div class="col-md-12">
-                <div class="col-sm-6">
-                    <div class="thumbnail">
-                        <img src="/img/capres/prabowo.jpg" class="img-responsive" />
-                        <div class="caption">
-                            <h3>Prabowo Subianto</h3>
-                            <p>{{RolePrabowo}}</p>
-                            <p>
-                                <a id="btnBukaPrabowo" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="thumbnail">
-                        <img src="/img/cawapres/Hatta.jpg" class="img-responsive" />
-                        <div class="caption">
-                            <h3>Hatta Rajasa</h3>
-                            <p>{{RoleHatta}}</p>
-                            <p>
-                                <a id="btnBukaHatta" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
+    <div class="container-fluid cover">
+        <img class ="row cover-overlay" src="/img/indonesia.png">
+        <div class="row">
+            <div class="col-md-6" style="padding-left:0px;">
+                <img class="cover-img" src="/img/prabowohatta.png">
             </div>
-            {{#if IsVoted}}
-            
-            {{else}}
-            <div class="col-md-12">
-                <button id="btnVote1" class="btn btn-default btn-block" data-target="#mdlCoblos" data-toggle="modal">Coblos</button>
+            <div class="col-md-6" style="padding-right:0px;">
+                <img class="cover-img" src="/img/jokowijk.png">
             </div>
-            {{/if}}
         </div>
-        <div class="col-md-6">
-            <div class="col-md-12">
-                <div class="col-sm-6">
-                    <div class="thumbnail">
-                        <img src="/img/capres/jokowi.jpg" class="img-responsive" />
-                        <div class="caption">
-                            <h3>Joko Widodo</h3>
-                            <p>{{RoleJokowi}}</p>
-                            <p>
-                                <a id="btnBukaJokowi" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
-                            </p>
+        <a class="nav-down">
+            <i class="fa fa-angle-down fa-5x"></i>
+        </a>
+        <div class="cover-caption">
+            <h1>LOGO NYUSUL</h1>
+            <p>FOR A BETTER FUTURE</p>
+        </div>
+    </div>
+    <div class="container info">
+        <div class="line">
+        </div>
+        <div class="title">
+            <h3>Kandidat</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/capres/prabowo.jpg" class="img-responsive" />
+                            <div class="caption">
+                                <h3>Prabowo Subianto</h3>
+                                <p>{{RolePrabowo}}</p>
+                                <p>
+                                    <a id="btnBukaPrabowo" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="thumbnail">
-                        <img src="/img/cawapres/jk.jpg" class="img-responsive" />
-                        <div class="caption">
-                            <h3>Jusuf Kalla</h3>
-                            <p>{{RoleJK}}</p>
-                            <p>
-                                <a id="btnBukaJK" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
-                            </p>
+                    <div class="col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/cawapres/Hatta.jpg" class="img-responsive" />
+                            <div class="caption">
+                                <h3>Hatta Rajasa</h3>
+                                <p>{{RoleHatta}}</p>
+                                <p>
+                                    <a id="btnBukaHatta" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-                
             </div>
-            {{#if IsVoted}}
-            
-            {{else}}
-            <div class="col-md-12">
-                <button id="btnVote2" class="btn btn-default btn-block" data-target="#mdlCoblos" data-toggle="modal">Coblos</button>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/capres/jokowi.jpg" class="img-responsive" />
+                            <div class="caption">
+                                <h3>Joko Widodo</h3>
+                                <p>{{RoleJokowi}}</p>
+                                <p>
+                                    <a id="btnBukaJokowi" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="thumbnail">
+                            <img src="/img/cawapres/jk.jpg" class="img-responsive" />
+                            <div class="caption">
+                                <h3>Jusuf Kalla</h3>
+                                <p>{{RoleJK}}</p>
+                                <p>
+                                    <a id="btnBukaJK" href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#mdlCandidateInfo" role="button">Buka</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            {{/if}}
+        </div>
+        <div class="row vote-bar">
+            <div class="col-md-6">
+                {{#if IsVoted}}
+
+                {{else}}
+                <div class="col-md-12">
+                    <button id="btnVote1" class="btn btn-default btn-block" data-target="#mdlCoblos" data-toggle="modal">Coblos</button>
+                </div>
+                {{/if}}
+            </div>
+            <div class="col-md-6">
+                {{#if IsVoted}}
+
+                {{else}}
+                <div class="col-md-12">
+                    <button id="btnVote2" class="btn btn-default btn-block" data-target="#mdlCoblos" data-toggle="modal">Coblos</button>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        <div class="title">
+            <h3>Visi &amp; Misi</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="title">
+            <h3>Janji-Janji</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="title">
+            <h3>Video Kampanye</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+            </div>
         </div>
     </div>
 </template>
