@@ -29,20 +29,26 @@ Template.versus.events({
     'click #btnBukaPrabowo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[3]);
-        console.log(data);
+//        Hyperbox.show('#mdlCandidateInfo');
+        ZPanel.show();
     },
     'click #btnBukaHatta': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[0]);
+//        Hyperbox.show('#mdlCandidateInfo');
+        ZPanel.show();
     },
     'click #btnBukaJokowi': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[2]);
-
+//        Hyperbox.show('#mdlCandidateInfo');
+        ZPanel.show();
     },
     'click #btnBukaJK': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidate, data.caleg[1]);
+//        Hyperbox.show('#mdlCandidateInfo');
+        ZPanel.show();
 
     },
     'click #btnVote1': function () {

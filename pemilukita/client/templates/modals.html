@@ -1,4 +1,5 @@
 <template name="modal_candidate_info">
+<!--
     <div class="modal fade" id="mdlCandidateInfo" tabindex="-1" role="dialog" aria-labelledby="mdlCandidateInfoLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -13,6 +14,21 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+-->
+
+    <div id="mdlCandidateInfo" class="hyperBox">
+        <div>
+            <div class="dialog-header">
+                <h2>{{Name}}</h2>
+            </div>
+            <div class="dialog-content">
+                {{Biografi}}
+            </div>
+            <div class="dialog-footer">
+                <a href="#" title="Close" onclick="return Hyperbox.hide('#mdlCandidateInfo');" class="hyperbox-close">close</a>
             </div>
         </div>
     </div>

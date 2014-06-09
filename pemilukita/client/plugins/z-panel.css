@@ -6,10 +6,21 @@
     left: 0;
     top: 0;
     z-index: 100;
-    background-color: red;
+    background-color: white;
+    border-right: 1px solid lightblue;
+    padding: 30px;
+    padding-top: 15px;
+    padding-right: 100px;
 }
 .leftpanel-hide {
     left: -48%;
+}
+.zpanel-header{
+    text-align: center;
+    margin: 0, 0,20px,0;
+}
+.zpanel-body{
+    text-align: justify;
 }
 .rightpanel {
     position: fixed;
@@ -19,8 +30,23 @@
     right: 0;
     top: 0;
     z-index: 100;
-    background-color: blue;
+    border-left: 1px solid red;
+    background-color: white;
+    padding: 30px;
+    padding-top: 15px;
+    padding-left: 100px;
 }
 .rightpanel-hide {
     right: -48%;
+}
+.zpanel-menu {
+    position: fixed;
+    z-index: 120;
+    top: -300px;
+    width: 100%;
+}
+.zpanel-menu > div {
+    top: 50%;
+    left: 50%;
+    margin-left: -83px;
 }

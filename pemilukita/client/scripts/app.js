@@ -11,3 +11,27 @@ Template.app.events({
 
 });
 
+Template.app.LeftHeader = function(){
+    if (Session.get(SessionRef.Name.ActiveCandidate)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidate);
+        return data.nama;
+    }
+};
+Template.app.LeftContent = function(){
+    if (Session.get(SessionRef.Name.ActiveCandidate)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidate);
+        return data.biografi;
+    }
+};
+Template.app.RightHeader = function(){
+    if (Session.get(SessionRef.Name.ActiveCandidate)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidate);
+        return data.nama;
+    }
+};
+Template.app.RightContent = function(){
+    if (Session.get(SessionRef.Name.ActiveCandidate)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidate);
+        return data.biografi;
+    }
+};
