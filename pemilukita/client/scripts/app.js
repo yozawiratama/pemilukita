@@ -8,9 +8,23 @@ Template.app.events({
 
 });
 
-Template.app.SatuReasons = function(){
-    return CandidateVotes.find({Candidate_ID : 1});
+Template.app.SatuReasons = function () {
+    return CandidateVotes.find({
+        Candidate_ID: 1
+    });
 }
-Template.app.DuaReasons = function(){
-    return CandidateVotes.find({Candidate_ID : 2});
+Template.app.DuaReasons = function () {
+    return CandidateVotes.find({
+        Candidate_ID: 2
+    });
+}
+Template.app.HasCoblos = function () {
+    if (Meteor.userId()) {
+        if (CandidateVotes.find({
+            Voter_ID: Meteor.userId()
+        }).count() > 0) return true;
+        else return false;
+    }
+    else return false;
+
 }

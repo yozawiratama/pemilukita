@@ -39,6 +39,7 @@ Template.modal_kebijakan_privasi.events({
             $('#btnLoginOnModal').attr('disabled', 'disabled');
     },
     'click #btnLoginOnModal': function () {
+        $('#mdlLoginTerms').modal('hide');
         Meteor.loginWithGoogle(function (err) {
             if (err)
                 alert(err.message);
