@@ -60,6 +60,7 @@
 }
 /* END OF NAVBAR */
 
+/* CONTENT */
 .info {
     position: relative;   
 }
@@ -123,6 +124,16 @@
     padding:10px 20px 10px 20px;
     color:#fff;
 }
+/* END OF CONTENT */
+
+/* FOOTER */
+.footer {
+    background: #2e2e2e;   
+    text-align: center;
+    color: #fff;
+    padding:15px;
+}
+/* END OF FOOTER */
 
 .leftpage {
     position: absolute;
