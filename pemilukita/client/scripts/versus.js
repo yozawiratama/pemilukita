@@ -1,9 +1,25 @@
 Template.versus.created = function () {};
 Template.versus.rendered = function () {
+    var footertop = $('.info').height();
     $('.vote-bar').sticky({
         topSpacing: window.innerHeight - 70
     });
     $('.cover').css('height', window.innerHeight);
+    
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        
+        if(scroll >= footertop) {
+            $('.is-sticky .vote-bar').css('position', 'absolute');
+            $('.is-sticky .vote-bar').css('bottom', $('.footer').height());
+            $('.is-sticky .vote-bar').css('top', '');
+        } else {
+            $('.is-sticky .vote-bar').css('position', 'fixed');
+            $('.is-sticky .vote-bar').css('bottom', 30);
+        }
+        
+        console.log(scroll +" " +footertop);
+    });
 };
 Template.versus.events({
     'click .nav-down': function (e) {
