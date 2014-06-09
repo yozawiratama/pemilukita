@@ -14,7 +14,7 @@ Template.versus.rendered = function () {
         $('.nav-container').css('top', navtop + (scroll*0.45));
         
         if($('.nav-container').offset().top>600) {
-            $('.nav-down').css('background', '#d9534f');
+            $('.nav-down').css('background', '#D7402C');
             $('.nav-down').css('color', '#fff');
             $('.nav-down').css('text-size', '28px');
             $('.nav-down').css('border-radius', '6px');
