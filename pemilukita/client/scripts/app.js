@@ -21,7 +21,7 @@ Template.app.DuaReasons = function () {
 Template.app.HasCoblos = function () {
     if (Meteor.userId()) {
         if (CandidateVotes.find({
-            Voter_ID: Meteor.userId()
+            User_ID: Meteor.userId()
         }).count() > 0) return true;
         else return false;
     }
