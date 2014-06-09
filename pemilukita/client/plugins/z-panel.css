@@ -1,0 +1,26 @@
+.leftpanel {
+    position: fixed;
+    width: 48%;
+    height: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: red;
+}
+.leftpanel-hide {
+    left: -48%;
+}
+.rightpanel {
+    position: fixed;
+    width: 48%;
+    height: 100%;
+    min-height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: blue;
+}
+.rightpanel-hide {
+    right: -48%;
+}
