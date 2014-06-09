@@ -23,7 +23,7 @@ Template.versus.rendered = function () {
             $('.nav-down').addClass('banding');
         } else if($('.nav-container').offset().top<=600) {
             $('.nav-down').css('background', '');
-            $('.nav-down').css('color', '#d9534f');
+            $('.nav-down').css('color', '#D7402C');
             $('.nav-down').css('text-size', '');
             $('.nav-down').css('border-radius', '50%');
             $('.nav-down i').css('display', 'block');
