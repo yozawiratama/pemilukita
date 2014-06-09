@@ -1,6 +1,6 @@
 .leftpanel {
     position: fixed;
-    width: 48%;
+    width: 50%;
     height: 100%;
     min-height: 100%;
     left: 0;
@@ -13,7 +13,7 @@
     padding-right: 100px;
 }
 .leftpanel-hide {
-    left: -48%;
+    left: -50%;
 }
 .zpanel-header{
     text-align: center;
@@ -24,7 +24,7 @@
 }
 .rightpanel {
     position: fixed;
-    width: 48%;
+    width: 50%;
     height: 100%;
     min-height: 100%;
     right: 0;
@@ -37,7 +37,7 @@
     padding-left: 100px;
 }
 .rightpanel-hide {
-    right: -48%;
+    right: -50%;
 }
 .zpanel-menu {
     position: fixed;

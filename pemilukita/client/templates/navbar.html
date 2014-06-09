@@ -1,37 +1,15 @@
 <template name="navbar">
-    <nav class="navbar navbar-default navbar-fixed-top landing-bar" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-<!--                <a class="navbar-brand" href="#">Brand</a>-->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right" style="padding:10px;">
-                    <li>
-                        {{#if IsLoggedIn}}
-                            <div class="user-session">
-                                <span>{{ActiveUsername}}</span>
-                                <button id="btnLogout" class="btn btn-danger">Logout</button>
-                            </div>
-                        {{else}}
-                            <button data-target="#mdlLoginTerms" data-toggle="modal" class="btn btn-danger">
-                                <i class="fa fa-lg fa-fw fa-google-plus"></i>&nbsp;&nbsp;Login with google</button>
-                            
-                        {{/if}}
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <div style="position:fixed; right:0; padding:10px; z-index:101;">
+    {{#if IsLoggedIn}}
+        <div class="user-session">
+            <span>{{ActiveUsername}}</span>
+            <button id="btnLogout" class="btn btn-danger">Logout</button>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
+    {{else}}
+        <button data-target="#mdlLoginTerms" data-toggle="modal" class="btn btn-danger">
+            <i class="fa fa-lg fa-fw fa-google-plus"></i>&nbsp;&nbsp;Login with google</button>
+
+    {{/if}}
+    </div>
     {{>modal_kebijakan_privasi}}
 </template>

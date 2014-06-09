@@ -1,27 +1,60 @@
 Template.versus.created = function () {};
 Template.versus.rendered = function () {
     var footertop = $('.info').height() + 10;
-    $('.vote-bar').sticky({
-        topSpacing: window.innerHeight - 70
-    });
+    var navtop = $('.nav-down').offset().top;
+//    $('.vote-bar').sticky({
+//        topSpacing: window.innerHeight - 70
+//    });
+    
     $('.cover').css('height', window.innerHeight);
     
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         
-        if(scroll >= footertop) {
-            $('.is-sticky .vote-bar').css('position', 'absolute');
-            $('.is-sticky .vote-bar').css('bottom', $('.footer').height()-50);
-            $('.is-sticky .vote-bar').css('top', '');
-        } else {
-            $('.is-sticky .vote-bar').css('position', 'fixed');
-            $('.is-sticky .vote-bar').css('bottom', 30);
+        $('.nav-container').css('top', navtop + (scroll*0.45));
+        
+        if($('.nav-container').offset().top>600) {
+            $('.nav-down').css('background', '#d9534f');
+            $('.nav-down').css('color', '#fff');
+            $('.nav-down').css('text-size', '28px');
+            $('.nav-down').css('border-radius', '6px');
+            $('.nav-down i').css('display', 'none');
+            $('.nav-down h3').css('display', 'block');
+            $('.nav-down').addClass('banding');
+        } else if($('.nav-container').offset().top<=600) {
+            $('.nav-down').css('background', '');
+            $('.nav-down').css('color', '#d9534f');
+            $('.nav-down').css('text-size', '');
+            $('.nav-down').css('border-radius', '50%');
+            $('.nav-down i').css('display', 'block');
+            $('.nav-down h3').css('display', 'none');
+            $('.banding').removeClass('banding');
         }
         
-        console.log(scroll +" " +footertop);
+        if(scroll-100 >= $('.info').offset().top) {
+            $('.nav-container').css('position', 'fixed');
+            $('.nav-container').css('top', -10);
+        } else if(scroll-100 <= $('.info').offset().top){
+            $('.nav-container').css('position', 'absolute');
+        }
+        
+//        if(scroll >= footertop) {
+//            $('.is-sticky .vote-bar').css('position', 'absolute');
+//            $('.is-sticky .vote-bar').css('bottom', $('.footer').height()-50);
+//            $('.is-sticky .vote-bar').css('top', '');
+//        } else {
+//            $('.is-sticky .vote-bar').css('position', 'fixed');
+//            $('.is-sticky .vote-bar').css('bottom', 30);
+//        }
+        
+        console.log(scroll +" " + $('.cover').innerHeight);
     });
 };
 Template.versus.events({
+    'click .nav-down.banding': function (e) {
+        e.preventDefault();
+        ZPanel.show();
+    },
     'click .nav-down': function (e) {
         e.preventDefault();
         $(window).scrollTo('.info', 1000);

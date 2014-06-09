@@ -13,10 +13,10 @@ ZPanel = {
     },
     hide: function () {
         $('.leftpanel').animate({
-            left: '-48%'
+            left: '-50%'
         }, 500);
         $('.rightpanel').animate({
-            right: '-48%'
+            right: '-50%'
         }, 500);
         $('.navbar').animate({
             top: '0'

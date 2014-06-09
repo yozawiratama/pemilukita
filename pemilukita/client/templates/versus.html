@@ -9,9 +9,12 @@
                 <img class="cover-img" src="/img/jokowijk.png">
             </div>
         </div>
-        <a href="" class="nav-down">
-            <i class="fa fa-angle-down fa-5x"></i>
-        </a>
+        <div class="nav-container">
+            <a href="" class="nav-down">
+                <i class="fa fa-angle-down fa-5x"></i>
+                <h3>Bandingkan</h3>
+            </a>
+        </div>
         <div class="cover-caption">
             <h1>LOGO NYUSUL</h1>
             <p>FOR A BETTER FUTURE</p>
@@ -20,12 +23,9 @@
     <div class="container info">
         <div class="line">
         </div>
-        <div class="title">
-            <h3>Kandidat</h3>
-        </div>
-        <div class="row kandidat">
+        <div class="row kandidat" style="margin-top:130px;">
             <div class="col-md-6">
-                <div class="col-md-12">
+                <div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <img src="/img/capres/prabowo.jpg" class="img-responsive" />
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="col-md-12">
+                <div>
                     <div class="col-sm-6">
                         <div class="thumbnail">
                             <img src="/img/capres/jokowi.jpg" class="img-responsive" />
@@ -86,14 +86,14 @@
         <div class="row vote-bar">
             <div class="col-md-6">
                 {{#if IsVoted}} {{else}}
-                <div class="col-md-12">
+                <div class="col-md-12" style="padding-left:0px">
                     <button id="btnVote1" class="btn btn-success btn-block btn-lg">PILIH</button>
                 </div>
                 {{/if}}
             </div>
             <div class="col-md-6">
                 {{#if IsVoted}} {{else}}
-                <div class="col-md-12">
+                <div class="col-md-12" style="padding-right:0px">
                     <button id="btnVote2" class="btn btn-success btn-block btn-lg">PILIH</button>
                 </div>
                 {{/if}}
@@ -114,34 +114,7 @@
             </div>
         </div>
         {{/if}}
-        <div class="title">
-            <h3>Visi &amp; Misi</h3>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-6">
-            </div>
-        </div>
-        <div class="title">
-            <h3>Janji-Janji</h3>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-6">
-            </div>
-        </div>
-        <div class="title">
-            <h3>Video Kampanye</h3>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-6">
-            </div>
-        </div>
-        <div class="row" style="height:80px;"></div>
+        <div class="row" style="height:100px;"></div>
     </div>
     <div class="container-fluid footer">
         <img src="/img/mw_logo.png" style="width:50px; margin:10px">
