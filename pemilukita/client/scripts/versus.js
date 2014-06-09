@@ -1,6 +1,6 @@
 Template.versus.created = function () {};
 Template.versus.rendered = function () {
-    var footertop = $('.info').height();
+    var footertop = $('.info').height() + 10;
     $('.vote-bar').sticky({
         topSpacing: window.innerHeight - 70
     });
@@ -11,7 +11,7 @@ Template.versus.rendered = function () {
         
         if(scroll >= footertop) {
             $('.is-sticky .vote-bar').css('position', 'absolute');
-            $('.is-sticky .vote-bar').css('bottom', $('.footer').height());
+            $('.is-sticky .vote-bar').css('bottom', $('.footer').height()-50);
             $('.is-sticky .vote-bar').css('top', '');
         } else {
             $('.is-sticky .vote-bar').css('position', 'fixed');
