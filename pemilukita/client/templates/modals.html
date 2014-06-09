@@ -33,8 +33,9 @@
                             <label class="col-sm-2 control-label">Provinsi</label>
                             <div class="col-sm-10">
                                 <select id="selProvinsi" class="form-control">
-                                    <option value="Aceh">Aceh</option>
-                                    <option value="Sumatera Utara">Sumatera Utara</option>
+                                    {{#each Provinces}}
+                                    <option value="{{nama_lengkap}}">{{nama_lengkap}}</option>
+                                    {{/each}}
                                 </select>
                             </div>
                         </div>
@@ -56,7 +57,7 @@
 </template>
 
 <template name="modal_kebijakan_privasi">
-<div class="modal fade" id="mdlLoginTerms" tabindex="-1" role="dialog" aria-labelledby="mdlLoginTermsLabel" aria-hidden="true">
+    <div class="modal fade" id="mdlLoginTerms" tabindex="-1" role="dialog" aria-labelledby="mdlLoginTermsLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -65,12 +66,13 @@
                 </div>
                 <div class="modal-body">
                     Kebijakan Privasi
-                    
-                    <input id="cbxTermsLogin" type="checkbox" /> Saya setuju dengan kebijakan dan privasi
+
+                    <input id="cbxTermsLogin" type="checkbox" />Saya setuju dengan kebijakan dan privasi
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="btnLoginOnModal" disabled type="button" class="btn btn-default" ><i class="fa fa-google"></i>&nbsp;Login With Google</button>
+                    <button id="btnLoginOnModal" disabled type="button" class="btn btn-default">
+                        <i class="fa fa-lg fa-fw fa-google-plus"></i>&nbsp;&nbsp;Login With Google</button>
                 </div>
             </div>
         </div>

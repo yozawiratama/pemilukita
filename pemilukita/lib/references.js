@@ -5,6 +5,7 @@ SessionRef = {
     Name: {
         PresidentialCandidate: "PresidentialCandidate",
         ActiveCandidate : "ActiveCandidate",
-        SelectedCandidateID : "SelectedCandidateID"
+        SelectedCandidateID : "SelectedCandidateID",
+        ListAllProvinces : "ListAllProvinces"
     }
 };

@@ -9,6 +9,9 @@ Template.reason.IsOwn = function () {
     if (this.CreatedBy == Meteor.userId()) return true;
     else return false;
 };
+Template.reason.AmountOfVote = function () {
+    return ReasonVotes.find({CandidateVote_ID : this._id}).count();
+};
 Template.reason.Disabled = function () {
     if (ReasonVotes.find({
         Voter_ID: Meteor.userId(),

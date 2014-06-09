@@ -26,6 +26,12 @@ Template.modal_coblos.events({
     }
 });
 
+Template.modal_coblos.Provinces = function () {
+    var provinces = Session.get(SessionRef.Name.ListAllProvinces);
+    if (provinces) {
+        return provinces.provinsi;
+    }
+}
 
 Template.modal_kebijakan_privasi.rendered = function () {
 

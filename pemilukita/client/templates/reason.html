@@ -3,7 +3,7 @@
         <p class="lead">"{{Reason}}"</p>
         {{#if IsOwn}}
         {{else}}
-        <button id="btnVoteUp" {{Disabled}} class="btn btn-default">up</button>
+        <span>{{AmountOfVote}}</span> <button id="btnVoteUp" {{Disabled}} class="btn btn-default">up</button>
         {{/if}}
     </div>
 </template>

@@ -1,9 +1,9 @@
 Template.versus.created = function () {};
 Template.versus.rendered = function () {
     $('.vote-bar').sticky({
-        topSpacing : window.innerHeight - 70
+        topSpacing: window.innerHeight - 70
     });
-    $('.cover').css('height', window.innerHeight); 
+    $('.cover').css('height', window.innerHeight);
 };
 Template.versus.events({
     'click .nav-down': function (e) {
@@ -30,10 +30,20 @@ Template.versus.events({
 
     },
     'click #btnVote1': function () {
-        Session.set(SessionRef.Name.SelectedCandidateID, 1);
+        if (Meteor.userId()) {
+            Session.set(SessionRef.Name.SelectedCandidateID, 1);
+            $('#mdlCoblos').modal('show');
+        } else {
+            $('#mdlLoginTerms').modal('show');
+        }
     },
     'click #btnVote2': function () {
-        Session.set(SessionRef.Name.SelectedCandidateID, 2);
+        if (Meteor.userId()) {
+            Session.set(SessionRef.Name.SelectedCandidateID, 2);
+            $('#mdlCoblos').modal('show');
+        } else {
+            $('#mdlLoginTerms').modal('show');
+        }
     }
 });
 
