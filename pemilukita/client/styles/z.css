@@ -58,6 +58,20 @@
     background: rgba(255, 255, 255, 0);
     border-color: rgba(255, 255, 255, 0);
 }
+
+.user-session {
+    border-radius: 6px;
+    padding: 5px;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.3);
+}
+
+.user-session span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 /* END OF NAVBAR */
 
 /* CONTENT */
@@ -84,6 +98,11 @@
 
 .kandidat .caption {
     padding-bottom: 0px;   
+}
+
+.kandidat .caption h3 {
+    white-space: nowrap;
+    overflow:hidden;
 }
 
 @media (min-width: 768px) {

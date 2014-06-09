@@ -16,8 +16,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right" style="padding:10px;">
                     <li>
-                        {{#if IsLoggedIn}} {{ActiveUsername}}
-                            <button id="btnLogout" class="btn btn-danger">Logout</button>
+                        {{#if IsLoggedIn}}
+                            <div class="user-session">
+                                <span>{{ActiveUsername}}</span>
+                                <button id="btnLogout" class="btn btn-danger">Logout</button>
+                            </div>
                         {{else}}
                             <button data-target="#mdlLoginTerms" data-toggle="modal" class="btn btn-danger">
                                 <i class="fa fa-lg fa-fw fa-google-plus"></i>&nbsp;&nbsp;Login with google</button>
