@@ -4,7 +4,8 @@ DataRef = {
 SessionRef = {
     Name: {
         PresidentialCandidate: "PresidentialCandidate",
-        ActiveCandidate : "ActiveCandidate",
+        ActiveCandidateLeft : "ActiveCandidateLeft",
+        ActiveCandidateRight : "ActiveCandidateRight",
         SelectedCandidateID : "SelectedCandidateID",
         ListAllProvinces : "ListAllProvinces"
     }

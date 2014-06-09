@@ -6,7 +6,7 @@ ZPanel = {
         $('.rightpanel').animate({
             right: '0'
         }, 500);
-        $('.navbar').animate({
+        $('#userbar').animate({
             top: '-65px'
         }, 400);
         $('.zpanel-menu').animate({top : '100px'}, 500);
@@ -18,7 +18,7 @@ ZPanel = {
         $('.rightpanel').animate({
             right: '-50%'
         }, 500);
-        $('.navbar').animate({
+        $('#userbar').animate({
             top: '0'
         }, 400);
         $('.zpanel-menu').animate({top : '-300px'}, 500);
