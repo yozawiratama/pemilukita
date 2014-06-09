@@ -1,16 +1,6 @@
 <template name="app">
     {{>navbar}} {{>versus}}
-    <div class="container">
-        {{#if HasCoblos}}
-        <div class="col-md-6">
-            {{#each SatuReasons}} {{>reason}} {{/each}}
-        </div>
-        <div class="col-md-6">
-            {{#each DuaReasons}} {{>reason}} {{/each}}
-        </div>
-        {{/if}}
-
-    </div>
+    
     {{>modal_candidate_info}}
     {{>modal_coblos}}
 </template>

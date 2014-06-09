@@ -1,6 +1,6 @@
 <template name="versus">
     <div class="container-fluid cover">
-        <img class ="row cover-overlay" src="/img/indonesia.png">
+        <img class="row cover-overlay" src="/img/indonesia.png">
         <div class="row">
             <div class="col-md-6" style="padding-left:0px;">
                 <img class="cover-img" src="/img/prabowohatta.png">
@@ -85,24 +85,30 @@
         </div>
         <div class="row vote-bar">
             <div class="col-md-6">
-                {{#if IsVoted}}
-
-                {{else}}
+                {{#if IsVoted}} {{else}}
                 <div class="col-md-12">
-                    <button id="btnVote1" class="btn btn-success btn-block btn-lg" >PILIH</button>
+                    <button id="btnVote1" class="btn btn-success btn-block btn-lg">PILIH</button>
                 </div>
                 {{/if}}
             </div>
             <div class="col-md-6">
-                {{#if IsVoted}}
-
-                {{else}}
+                {{#if IsVoted}} {{else}}
                 <div class="col-md-12">
-                    <button id="btnVote2" class="btn btn-success btn-block btn-lg" >PILIH</button>
+                    <button id="btnVote2" class="btn btn-success btn-block btn-lg">PILIH</button>
                 </div>
                 {{/if}}
             </div>
         </div>
+        {{#if HasCoblos}}
+        <div class="row">
+            <div class="col-md-6">
+                {{#each SatuReasons}} {{>reason}} {{/each}}
+            </div>
+            <div class="col-md-6">
+                {{#each DuaReasons}} {{>reason}} {{/each}}
+            </div>
+        </div>
+        {{/if}}
         <div class="title">
             <h3>Visi &amp; Misi</h3>
         </div>

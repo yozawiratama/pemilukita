@@ -94,3 +94,25 @@ Template.versus.IsVoted = function () {
         return true;
     } else return false;
 };
+
+Template.versus.SatuReasons = function () {
+    return CandidateVotes.find({
+        Candidate_ID: 1
+    });
+}
+Template.versus.DuaReasons = function () {
+    return CandidateVotes.find({
+        Candidate_ID: 2
+    });
+}
+Template.versus.HasCoblos = function () {
+    if (Meteor.userId()) {
+        if (CandidateVotes.find({
+            User_ID: Meteor.userId()
+        }).count() > 0) {
+            Meteor.subscribe('ReasonVotes');
+            return true;
+        } else return false;
+    } else return false;
+
+}
