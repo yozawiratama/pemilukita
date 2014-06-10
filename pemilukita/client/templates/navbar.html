@@ -1,15 +1,17 @@
 <template name="navbar">
     <div id="userbar" style="position:fixed; right:0; padding:10px; z-index:101;">
-    {{#if IsLoggedIn}}
+        <!-- Place this tag where you want the share button to render. -->
+        <div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" data-href="http://pemilukita-15.onmodulus.net"></div>
+        {{#if IsLoggedIn}}
         <div class="user-session">
             <span>{{ActiveUsername}}</span>
             <button id="btnLogout" class="btn btn-danger">Logout</button>
         </div>
-    {{else}}
+        {{else}}
         <button data-target="#mdlLoginTerms" data-toggle="modal" class="btn btn-danger">
             <i class="fa fa-lg fa-fw fa-google-plus"></i>&nbsp;&nbsp;Login with google</button>
 
-    {{/if}}
+        {{/if}}
     </div>
     {{>modal_kebijakan_privasi}}
 </template>

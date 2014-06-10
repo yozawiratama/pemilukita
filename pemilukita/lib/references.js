@@ -6,7 +6,21 @@ SessionRef = {
         PresidentialCandidate: "PresidentialCandidate",
         ActiveCandidateLeft : "ActiveCandidateLeft",
         ActiveCandidateRight : "ActiveCandidateRight",
+        ActiveCampaignVideoIdLeft : "ActiveCampaignVideoIdLeft",
+        ActiveCampaignVideoIdRight : "ActiveCampaignVideoIdRight",
         SelectedCandidateID : "SelectedCandidateID",
-        ListAllProvinces : "ListAllProvinces"
+        ListAllProvinces : "ListAllProvinces",
+        ListAllCampaignVideos : "ListAllCampaignVideos",
+        ListPrabowoCampaignVideos : "ListPrabowoCampaignVideos",
+        ListHattaCampaignVideos : "ListHattaCampaignVideos",
+        ListJokowiCampaignVideos : "ListJokowiCampaignVideos",
+        ListJKCampaignVideos : "ListJKCampaignVideos",
+        IsBiografi : "IsBiografi",
+        IsRiwayatOrganisasi : "IsRiwayatOrganisasi",
+        IsRiwayatPekerjaan : "IsRiwayatPekerjaan",
+        IsRiwayatPendidikan : "IsRiwayatPendidikan",
+        IsRiwayatPenghargaan : "IsRiwayatPenghargaan",
+        IsTVKampanye : "IsTVKampanye"
+
     }
 };

@@ -11,6 +11,7 @@
     padding: 30px;
     padding-top: 15px;
     padding-right: 100px;
+    overflow-x: auto;
 }
 .leftpanel-hide {
     left: -50%;
@@ -35,6 +36,7 @@
     padding: 30px;
     padding-top: 15px;
     padding-left: 100px;
+    overflow-x: auto;
 }
 .rightpanel-hide {
     right: -50%;

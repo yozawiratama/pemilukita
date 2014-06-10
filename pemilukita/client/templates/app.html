@@ -4,54 +4,103 @@
         <div class="leftpanel leftpanel-hide">
             <center>
                 <div class="btn-group" data-toggle="buttons">
-                    <label id="btnPrabowoInfo" class="btn btn-default active">
+                    <label id="btnPrabowoInfo" class="btn btn-danger active">
                         <input  type="radio" >Capres
                     </label>
-                    <label id="btnHattaInfo" class="btn btn-default">
+                    <label id="btnHattaInfo" class="btn btn-danger">
                         <input  type="radio" >Cawapres
                     </label>
                 </div>
             </center>
             <h1 class="zpanel-header">{{LeftHeader}}</h1>
             <div id="leftContent" class="zpanel-body">
-                {{LeftContent}}
+                {{#if IsBiografi}}
+                {{LeftBiografi}}
+                {{/if}}
+                {{#if IsRiwayatOrganisasi}}
+                {{LeftRiwayatOrganisasi}}
+                {{/if}}
+                {{#if IsRiwayatPekerjaan}}
+                {{LeftRiwayatPekerjaan}}
+                {{/if}}
+                {{#if IsRiwayatPendidikan}}
+                {{LeftRiwayatPendidikan}}
+                {{/if}}
+                {{#if IsRiwayatPenghargaan}}
+                {{LeftRiwayatPenghargaan}}
+                {{/if}}
+                {{#if IsTVKampanye}}
+                <iframe width="560" height="315" src="//www.youtube.com/embed/{{LeftTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
+                <div class="list-group">
+                    {{#each LeftTVKampanyeLists}}
+                    {{>campaign_video_list_item}}
+
+                    {{/each}}
+                </div>
+                {{/if}}
             </div>
         </div>
-        <div class="rightpanel rightpanel-hide">
+        <div class="rightpanel rightpanel-hide" style="background: #d2322d;color: white;">
             <center>
                 <div class="btn-group" data-toggle="buttons">
-                    <label id="btnJokowiInfo" class="btn btn-danger active">
+                    <label id="btnJokowiInfo" class="btn btn-default active">
                         <input  type="radio">Capres
                     </label>
-                    <label id="btnJKInfo" class="btn btn-danger">
+                    <label id="btnJKInfo" class="btn btn-default">
                         <input  type="radio">Cawapres
                     </label>
                 </div>
             </center>
             <h1 class="zpanel-header">{{RightHeader}}</h1>
             <div id="rightContent" class="zpanel-body">
-                {{RightContent}}
+                {{#if IsBiografi}}
+                {{RightBiografi}}
+                {{/if}}
+                {{#if IsRiwayatOrganisasi}}
+                {{RightRiwayatOrganisasi}}
+                {{/if}}
+                {{#if IsRiwayatPekerjaan}}
+                {{RightRiwayatPekerjaan}}
+                {{/if}}
+                {{#if IsRiwayatPendidikan}}
+                {{RightRiwayatPendidikan}}
+                {{/if}}
+                {{#if IsRiwayatPenghargaan}}
+                {{RightRiwayatPenghargaan}}
+                {{/if}}
+                {{#if IsTVKampanye}}
+                <iframe width="560" height="315" src="//www.youtube.com/embed/{{RightTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
+                <div class="list-group">
+                    {{#each RightTVKampanyeLists}}
+                    {{>campaign_video_list_item}}
+                    {{/each}}
+                </div>
+                {{/if}}
             </div>
         </div>
         <div class="zpanel-menu">
             <div class="btn-group-vertical" data-toggle="buttons">
-                <label class="btn btn-default active">
+                <label id="btnBiografi" class="btn btn-default active">
                     <input type="radio">Data Pribadi
                 </label>
-                <label class="btn btn-default">
+                <label id="btnROgranisasi" class="btn btn-default">
                     <input type="radio">Riwayat Organisasi
                 </label>
-                <label class="btn btn-default">
+                <label id="btnRPekerjaan" class="btn btn-default">
                     <input type="radio">Riwayat Pekerjaan
                 </label>
-                <label class="btn btn-default">
+                <label id="btnRPendidikan" class="btn btn-default">
                     <input type="radio">Riwayat Pendidikan
                 </label>
-                <label class="btn btn-default">
+                <label id="btnRPenghargaan" class="btn btn-default">
                     <input type="radio">Riwayat Penghargaan
+                </label>
+                <label id="btnTVKampanye" class="btn btn-success">
+                    <input type="radio">TV Kampanye
                 </label>
                 <button type="button" class="btn btn-danger" onclick="return ZPanel.hide();">Tutup</button>
             </div>
+            
 
         </div>
     </div>
