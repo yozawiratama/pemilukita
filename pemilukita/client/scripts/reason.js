@@ -16,6 +16,6 @@ Template.reason.Disabled = function () {
     if (ReasonVotes.find({
         Voter_ID: Meteor.userId(),
         CandidateVote_ID: this._id
-    }).count() > 0) return "disabled";
-    else return "";
+    }).count() > 0) return true;
+    else return false;
 };

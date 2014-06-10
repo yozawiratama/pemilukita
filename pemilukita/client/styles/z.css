@@ -29,7 +29,7 @@
     text-align: center;
     left: 0;
     right: 0;
-    top: 60%;
+    top: 65%;
 }
 .cover .nav-container .nav-down {
     cursor: pointer;
@@ -198,6 +198,34 @@
     padding: 15px;
 }
 /* END OF CONTENT */
+
+.lead .upvote {
+    font-size:14px;  
+    background: #fff;
+    color:#D7402C;
+    border-radius:10px;
+    padding:5px 10px 5px 10px;
+}
+
+.btn-vote {
+    border-radius:8px; 
+    background: #D7402C;
+    color:#fff;
+    border: solid 0px;
+    margin-right:-5px;
+    margin-left:10px;
+}
+
+.btn-vote:hover,
+.btn-vote-dis {
+    cursor: pointer;
+    border-radius:8px; 
+    background: #fff;
+    color:#D7402C;
+    border: solid 0px;
+    margin-right:-5px;
+    margin-left:10px;
+}
 
 /* FOOTER */
 

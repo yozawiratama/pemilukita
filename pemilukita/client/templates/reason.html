@@ -1,9 +1,14 @@
 <template name="reason">
     <div>
-        <p class="lead">"{{Reason}}"</p>
-        {{#if IsOwn}}
-        {{else}}
-        <span>{{AmountOfVote}}</span> <button id="btnVoteUp" {{Disabled}} class="btn btn-default">up</button>
-        {{/if}}
+        <p class="lead">
+            "{{Reason}}"
+            {{#if Disabled}}
+                <span class="upvote">{{AmountOfVote}} {{#if IsOwn}}{{else}}<button class="btn-vote-dis">
+                    <i class="fa fa-fw fa-thumbs-o-up"></i>You voted this!</button>{{/if}}</span>
+            {{else}}
+                <span class="upvote">{{AmountOfVote}} {{#if IsOwn}}{{else}}<button id="btnVoteUp" class="btn-vote">
+                    <i class="fa fa-fw fa-thumbs-o-up"></i>Vote this!</button>{{/if}}</span>
+            {{/if}}
+        </p>
     </div>
 </template>
