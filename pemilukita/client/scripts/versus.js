@@ -15,7 +15,9 @@ Template.versus.rendered = function () {
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         
-        $('.nav-container').css('top', navtop + (scroll*0.7));
+        if(scroll <= $('.vote-bar').offset().top-180) {
+            $('.nav-container').css('top', navtop + (scroll*0.7));
+        }
         $('.cover-caption').css('top', logotop + -(scroll*0.45));
         
         if($('.nav-container').offset().top>600) {
@@ -24,9 +26,9 @@ Template.versus.rendered = function () {
             $('.nav-down').css('text-size', '28px');
             $('.nav-down').css('height', '150px');
             $('.nav-down').css('width', '150px');
-            $('.nav-down').css('-webkit-box-shadow', '0 5px 10px rgba(119, 119, 119, 0.8)');
-            $('.nav-down').css('-moz-box-shadow', '0 5px 10px rgba(119, 119, 119, 0.8)');
-            $('.nav-down').css('box-shadow', '0 5px 10px rgba(119, 119, 119, 0.8)');
+            $('.nav-down').css('-webkit-box-shadow', '0 5px 10px rgba(0, 0, 0, 0.3)');
+            $('.nav-down').css('-moz-box-shadow', '0 5px 10px rgba(0, 0, 0, 0.3)');
+            $('.nav-down').css('box-shadow', '0 5px 10px rgba(0, 0, 0, 0.3)');
             $('.nav-down .dwn').css('display', 'none');
             $('.nav-down .src').css('display', 'block');
             $('.nav-down').addClass('banding');
@@ -68,7 +70,7 @@ Template.versus.rendered = function () {
 //            $('.is-sticky .vote-bar').css('bottom', 30);
 //        }
         
-        console.log(scroll +" " + $('.info').offset().top);
+        console.log(scroll +" " + ($('.vote-bar').offset().top - 190));
     });
 };
 Template.versus.events({
