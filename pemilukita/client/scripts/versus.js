@@ -22,17 +22,25 @@ Template.versus.rendered = function () {
             $('.nav-down').css('background', '#D7402C');
             $('.nav-down').css('color', '#fff');
             $('.nav-down').css('text-size', '28px');
-            $('.nav-down').css('border-radius', '6px');
-            $('.nav-down i').css('display', 'none');
-            $('.nav-down h3').css('display', 'block');
+            $('.nav-down').css('height', '150px');
+            $('.nav-down').css('width', '150px');
+            $('.nav-down').css('-webkit-box-shadow', '0 5px 10px rgba(119, 119, 119, 0.8)');
+            $('.nav-down').css('-moz-box-shadow', '0 5px 10px rgba(119, 119, 119, 0.8)');
+            $('.nav-down').css('box-shadow', '0 5px 10px rgba(119, 119, 119, 0.8)');
+            $('.nav-down .dwn').css('display', 'none');
+            $('.nav-down .src').css('display', 'block');
             $('.nav-down').addClass('banding');
         } else if($('.nav-container').offset().top<=600) {
             $('.nav-down').css('background', '');
             $('.nav-down').css('color', '#D7402C');
             $('.nav-down').css('text-size', '');
-            $('.nav-down').css('border-radius', '50%');
-            $('.nav-down i').css('display', 'block');
-            $('.nav-down h3').css('display', 'none');
+            $('.nav-down').css('height', '80px');
+            $('.nav-down').css('width', '80px');
+            $('.nav-down').css('-webkit-box-shadow', '');
+            $('.nav-down').css('-moz-box-shadow', '');
+            $('.nav-down').css('box-shadow', '');
+            $('.nav-down .dwn').css('display', 'block');
+            $('.nav-down .src').css('display', 'none');
             $('.banding').removeClass('banding');
         }
         

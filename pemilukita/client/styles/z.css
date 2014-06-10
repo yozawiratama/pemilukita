@@ -44,15 +44,21 @@
     border-radius: 50%;
     border: 2px #D7402C solid;
     color: #D7402C;
-    padding: 3px 15px 3px 15px;
+    width:80px;
+    height:80px;
+    text-align: center;
+    vertical-align: middle;
     -webkit-transition: all ease-out 300ms;
     -moz-transition: all ease-out 300ms;
     -o-transition: all ease-out 300ms;
     transition: all ease-out 300ms;
 }
-.cover .nav-container .nav-down h3 {
+.cover .nav-container .nav-down .dwn {
+    margin:auto;
+}
+.cover .nav-container .nav-down .src {
     display: none;
-    margin-top: 10px;
+    margin:auto;
 }
 .cover .cover-caption {
     position: absolute;
