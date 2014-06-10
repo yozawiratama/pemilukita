@@ -71,10 +71,13 @@
     margin-top: 15px;
     color: #fff;
     background: rgb(215, 64, 44);
-    -webkit-transition: all ease-out 300ms;
-    -moz-transition: all ease-out 300ms;
-    -o-transition: all ease-out 300ms;
-    transition: all ease-out 300ms;
+}
+
+.cover .nav-container .banding:hover {
+    width: 170px;
+    height: 170px;
+    color: #fff;
+    background: rgb(215, 64, 44);
 }
 /* END OF COVER */
 
