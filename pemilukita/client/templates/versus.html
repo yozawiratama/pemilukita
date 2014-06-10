@@ -1,14 +1,6 @@
 <template name="versus">
     <div class="container-fluid cover">
         <img class="row cover-overlay" src="/img/indonesia.png">
-        <div class="row">
-            <div class="col-md-6" style="padding-left:0px;">
-                <img class="cover-img" src="/img/prabowohatta.png">
-            </div>
-            <div class="col-md-6" style="padding-right:0px;">
-                <img class="cover-img" src="/img/jokowijk.png">
-            </div>
-        </div>
         <div class="nav-container">
             <a href="" class="nav-down">
                 <i class="fa fa-angle-down fa-5x"></i>
@@ -22,10 +14,28 @@
             </h2>
         </div>
     </div>
-    <div class="container info">
+    <div class="container-fluid capres">
+        <div class="row" style="height:100%">
+            <div class="col-md-6" style="padding-left:0px; height:100%;">
+                <img class="cover-img" src="/img/prabowohatta.png">
+            </div>
+            <div class="col-md-6" style="padding-right:0px; height:100%;">
+                <img class="cover-img" src="/img/jokowijk.png">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid info">
         <div class="line">
         </div>
-        <div class="row kandidat" style="margin-top:130px;">
+        <div class="row bg-alt">
+            <div class="col-md-6">
+                <img src="/img/prabowohatta2.png" style="margin-top:-30%">
+            </div>
+            <div class="col-md-6">
+                <img src="/img/jokowijk2.png" style="margin-left:10%;">
+            </div>
+        </div>
+        <!--<div class="row kandidat" style="margin-top:130px;">
             <div class="col-md-6">
                 <div>
                     <div class="col-sm-6">
@@ -84,28 +94,42 @@
 
                 </div>
             </div>
-        </div>
-        <div class="row vote-bar">
+        </div>-->
+    </div>
+    <div class="container-fluid vote-bar">
+        <div class="row">
             <div class="col-md-6">
-                {{#if IsVoted}} {{else}}
+                {{#if IsVoted}}
                 <div class="col-md-12" style="padding-left:0px">
-                    <button id="btnVote1" class="btn btn-success btn-block btn-lg">PILIH</button>
+                    <div class="vote-name">PRABOWO-HATTA</div>
+                </div>
+                {{else}}
+                <div class="col-md-12" style="padding-left:0px">
+                    <button id="btnVote1" class="btn btn-danger btn-block btn-lg">PILIH PRABOWO-HATTA</button>
                 </div>
                 {{/if}}
             </div>
             <div class="col-md-6">
-                {{#if IsVoted}} {{else}}
+                {{#if IsVoted}}
+                <div class="col-md-12" style="padding-left:0px">
+                    <div class="vote-name">JOKOWI-JK</div>
+                </div>
+                {{else}}
                 <div class="col-md-12" style="padding-right:0px">
-                    <button id="btnVote2" class="btn btn-success btn-block btn-lg">PILIH</button>
+                    <button id="btnVote2" class="btn btn-danger btn-block btn-lg">PILIH JOKOWI-JK</button>
                 </div>
                 {{/if}}
             </div>
         </div>
+    </div>
+    <div class="container-fluid komentar">
         {{#if HasCoblos}}
+        <div class="line">
+        </div>
         <div class="title">
             <h3>
                 Komentar Publik
-            </h3><br/>
+            </h3>
         </div>
         <div class="row">
             <div class="col-md-6" style="text-align:right">
@@ -115,8 +139,8 @@
                 {{#each DuaReasons}} {{>reason}} {{/each}}
             </div>
         </div>
-        {{/if}}
         <div class="row" style="height:100px;"></div>
+        {{/if}}
     </div>
     <div class="container-fluid footer">
         <div class="col-md-offset-4 col-md-2">

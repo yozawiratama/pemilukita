@@ -2,16 +2,21 @@ Template.versus.created = function () {};
 Template.versus.rendered = function () {
     var footertop = $('.info').height() + 10;
     var navtop = $('.nav-down').offset().top;
+    var logotop = $('.cover-caption').offset().top;
 //    $('.vote-bar').sticky({
 //        topSpacing: window.innerHeight - 70
 //    });
     
     $('.cover').css('height', window.innerHeight);
+    $('.capres').css('height', window.innerHeight);
+    $('.info').css('height', window.innerHeight);
+    $('.vote-bar').css('top', window.innerHeight*2 - $('.vote-bar').height());
     
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         
-        $('.nav-container').css('top', navtop + (scroll*0.45));
+        $('.nav-container').css('top', navtop + (scroll*0.7));
+        $('.cover-caption').css('top', logotop + -(scroll*0.45));
         
         if($('.nav-container').offset().top>600) {
             $('.nav-down').css('background', '#D7402C');
@@ -31,12 +36,20 @@ Template.versus.rendered = function () {
             $('.banding').removeClass('banding');
         }
         
-        if(scroll-100 >= $('.info').offset().top) {
-            $('.nav-container').css('position', 'fixed');
-            $('.nav-container').css('top', -10);
-        } else if(scroll-100 <= $('.info').offset().top){
-            $('.nav-container').css('position', 'absolute');
+        if(scroll >= $('.info').offset().top) {
+            $('.capres').css('position', 'absolute');
+            $('.capres').css('top', $('.cover').height());
+        } else {
+            $('.capres').css('position', 'fixed');
+            $('.capres').css('top', 0);
         }
+        
+//        if(scroll-400 >= $('.info').offset().top) {
+//            $('.nav-container').css('position', 'fixed');
+//            $('.nav-container').css('top', -10);
+//        } else if(scroll-100 <= $('.info').offset().top){
+//            $('.nav-container').css('position', 'absolute');
+//        }
         
 //        if(scroll >= footertop) {
 //            $('.is-sticky .vote-bar').css('position', 'absolute');
@@ -47,7 +60,7 @@ Template.versus.rendered = function () {
 //            $('.is-sticky .vote-bar').css('bottom', 30);
 //        }
         
-        console.log(scroll +" " + $('.cover').innerHeight);
+        console.log(scroll +" " + $('.info').offset().top);
     });
 };
 Template.versus.events({
