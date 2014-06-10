@@ -2,26 +2,57 @@
     <div>
         {{>navbar}} {{>versus}} {{>modal_candidate_info}} {{>modal_coblos}}
         <div class="leftpanel leftpanel-hide">
+            <center>
+                <div class="btn-group" data-toggle="buttons">
+                    <label id="btnPrabowoInfo" class="btn btn-default active">
+                        <input  type="radio" >Capres
+                    </label>
+                    <label id="btnHattaInfo" class="btn btn-default">
+                        <input  type="radio" >Cawapres
+                    </label>
+                </div>
+            </center>
             <h1 class="zpanel-header">{{LeftHeader}}</h1>
             <div id="leftContent" class="zpanel-body">
                 {{LeftContent}}
             </div>
         </div>
         <div class="rightpanel rightpanel-hide">
+            <center>
+                <div class="btn-group" data-toggle="buttons">
+                    <label id="btnJokowiInfo" class="btn btn-danger active">
+                        <input  type="radio">Capres
+                    </label>
+                    <label id="btnJKInfo" class="btn btn-danger">
+                        <input  type="radio">Cawapres
+                    </label>
+                </div>
+            </center>
             <h1 class="zpanel-header">{{RightHeader}}</h1>
             <div id="rightContent" class="zpanel-body">
                 {{RightContent}}
             </div>
         </div>
         <div class="zpanel-menu">
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-default">Data Pribadi</button>
-                <button type="button" class="btn btn-default">Riwayat Organisasi</button>
-                <button type="button" class="btn btn-default">Riwayat Pekerjaan</button>
-                <button type="button" class="btn btn-default">Riwayat Pendidikan</button>
-                <button type="button" class="btn btn-default">Riwayat Penghargaan</button>
+            <div class="btn-group-vertical" data-toggle="buttons">
+                <label class="btn btn-default active">
+                    <input type="radio">Data Pribadi
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio">Riwayat Organisasi
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio">Riwayat Pekerjaan
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio">Riwayat Pendidikan
+                </label>
+                <label class="btn btn-default">
+                    <input type="radio">Riwayat Penghargaan
+                </label>
                 <button type="button" class="btn btn-danger" onclick="return ZPanel.hide();">Tutup</button>
             </div>
+
         </div>
     </div>
 </template>
