@@ -18,16 +18,85 @@
                 {{LeftBiografi}}
                 {{/if}}
                 {{#if IsRiwayatOrganisasi}}
-                {{LeftRiwayatOrganisasi}}
+                {{#each LeftRiwayatOrganisasis}}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {{jabatan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Ringkasan</dt>
+                            <dd>{{ringkasan}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Mulai</dt>
+                            <dd>{{tanggal_mulai}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Selesai</dt>
+                            <dd>{{tanggal_selesai}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsRiwayatPekerjaan}}
-                {{LeftRiwayatPekerjaan}}
+                {{#each LeftRiwayatPekerjaans}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{ringkasan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Tanggal Mulai</dt>
+                            <dd>{{tanggal_mulai}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Selesai</dt>
+                            <dd>{{tanggal_selesai}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsRiwayatPendidikan}}
-                {{LeftRiwayatPendidikan}}
+                {{#each LeftRiwayatPendidikans}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{ringkasan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Tanggal Mulai</dt>
+                            <dd>{{tanggal_mulai}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Selesai</dt>
+                            <dd>{{tanggal_selesai}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsRiwayatPenghargaan}}
-                {{LeftRiwayatPenghargaan}}
+                {{#each LeftIsRiwayatPenghargaans}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{ringkasan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Institusi</dt>
+                            <dd>{{institusi}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal</dt>
+                            <dd>{{tanggal}}</dd>
+                        </dl>
+
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsTVKampanye}}
                 <iframe width="560" height="315" src="//www.youtube.com/embed/{{LeftTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
@@ -57,16 +126,84 @@
                 {{RightBiografi}}
                 {{/if}}
                 {{#if IsRiwayatOrganisasi}}
-                {{RightRiwayatOrganisasi}}
+                {{#each RightRiwayatOrganisasis}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{jabatan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Ringkasan</dt>
+                            <dd>{{ringkasan}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Mulai</dt>
+                            <dd>{{tanggal_mulai}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Selesai</dt>
+                            <dd>{{tanggal_selesai}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsRiwayatPekerjaan}}
-                {{RightRiwayatPekerjaan}}
+                {{#each RightRiwayatPekerjaans}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{ringkasan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Tanggal Mulai</dt>
+                            <dd>{{tanggal_mulai}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Selesai</dt>
+                            <dd>{{tanggal_selesai}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsRiwayatPendidikan}}
-                {{RightRiwayatPendidikan}}
+                {{#each RightRiwayatPendidikans}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{ringkasan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Tanggal Mulai</dt>
+                            <dd>{{tanggal_mulai}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal Selesai</dt>
+                            <dd>{{tanggal_selesai}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsRiwayatPenghargaan}}
-                {{RightRiwayatPenghargaan}}
+                {{#each RightRiwayatPenghargaans}}
+                <div class="panel panel-default" style="color :#333">
+                    <div class="panel-heading">
+                        {{ringkasan}}
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Institusi</dt>
+                            <dd>{{institusi}}</dd>
+                        </dl>
+                        <dl>
+                            <dt>Tanggal</dt>
+                            <dd>{{tanggal}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                {{/each}}
                 {{/if}}
                 {{#if IsTVKampanye}}
                 <iframe width="560" height="315" src="//www.youtube.com/embed/{{RightTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>

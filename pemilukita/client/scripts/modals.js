@@ -12,7 +12,6 @@ Template.modal_candidate_info.Biografi = function () {
 };
 
 
-
 Template.modal_coblos.events({
     'submit': function (e) {
         e.preventDefault();
@@ -46,9 +45,14 @@ Template.modal_kebijakan_privasi.events({
     },
     'click #btnLoginOnModal': function () {
         $('#mdlLoginTerms').modal('hide');
-        Meteor.loginWithGoogle(function (err) {
-            if (err)
-                alert(err.message);
-        });
+        var isc = $('#cbxTermsLogin').is(':checked');
+        if (isc) {
+            Meteor.loginWithGoogle(function (err) {
+                if (err)
+                    alert(err.message);
+                else
+                    $('#cbxTermsLogin').removeAttr('checked');
+            });
+        }
     }
 });

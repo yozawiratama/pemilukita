@@ -45,6 +45,7 @@
                         <h4 class="modal-title" id="mdlCoblosLabel">Data</h4>
                     </div>
                     <div class="modal-body">
+                        <p>Pilihlah provinsi sesuai dengan KTP anda, dan masukan alasan positif mengapa anda memilih Capres dan Cawapres ini. Alasan hanya bisa dimasukan satu kali dan tidak dapat di edit.</p>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Provinsi</label>
                             <div class="col-sm-10">
@@ -58,7 +59,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Alasan</label>
                             <div class="col-sm-10">
-                                <textarea id="txaReason" class="form-control" style="height : 100px;"></textarea>
+                                <textarea id="txaReason" class="form-control" style="height : 150px;"></textarea>
                             </div>
                         </div>
                     </div>
@@ -78,12 +79,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="mdlLoginTermsLabel">Data</h4>
+                    <h4 class="modal-title" id="mdlLoginTermsLabel">Silahkan menyetujui kebijakan layanan dan privasi</h4>
                 </div>
                 <div class="modal-body">
-                    Kebijakan Privasi
-
-                    <input id="cbxTermsLogin" type="checkbox" />Saya setuju dengan kebijakan dan privasi
+                    <div class="checkbox">
+                        <label>
+                            <input id="cbxTermsLogin" type="checkbox"> Saya setuju dengan <a href="https://docs.google.com/document/d/1Vk1rn5QXTczayOVcdiQugLOyeAvAjjU_cNIcFa-tpGM/pub" target="_blank"> kebijakan layanan dan privasi</a>
+                        </label>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

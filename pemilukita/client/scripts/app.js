@@ -100,6 +100,30 @@ Template.app.LeftBiografi = function () {
         return data.biografi;
     }
 };
+Template.app.LeftRiwayatOrganisasis = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.riwayat_organisasi;
+    }
+};
+Template.app.LeftRiwayatPekerjaans = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.riwayat_pekerjaan;
+    }
+};
+Template.app.LeftRiwayatPendidikans = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.riwayat_pendidikan;
+    }
+};
+Template.app.LeftIsRiwayatPenghargaans = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.riwayat_penghargaan;
+    }
+};
 Template.app.LeftTVKampanyeLists = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
@@ -128,6 +152,30 @@ Template.app.RightBiografi = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateRight);
         return data.biografi;
+    }
+};
+Template.app.RightRiwayatOrganisasis = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.riwayat_organisasi;
+    }
+};
+Template.app.RightRiwayatPekerjaans = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.riwayat_pekerjaan;
+    }
+};
+Template.app.RightRiwayatPendidikans = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.riwayat_pendidikan;
+    }
+};
+Template.app.RightRiwayatPenghargaans = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.riwayat_penghargaan;
     }
 };
 Template.app.RightTVKampanyeLists = function () {
