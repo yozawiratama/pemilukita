@@ -77,6 +77,7 @@ Template.versus.events({
     'click .nav-down.banding': function (e) {
         e.preventDefault();
         ZPanel.show();
+        $('body').addClass('modal-open');
     },
     'click .nav-down': function (e) {
         e.preventDefault();

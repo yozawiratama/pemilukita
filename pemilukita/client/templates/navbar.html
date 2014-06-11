@@ -1,7 +1,9 @@
 <template name="navbar">
+    <!-- Place this tag where you want the share button to render. -->
+    <div style="position:fixed; left:0; padding:10px; z-index:101;">
+        <div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" data-href="http://pemilukita-15.onmodulus.net">             </div>
+    </div>
     <div id="userbar" style="position:fixed; right:0; padding:10px; z-index:101;">
-        <!-- Place this tag where you want the share button to render. -->
-        <div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" data-href="http://pemilukita-15.onmodulus.net"></div>
         {{#if IsLoggedIn}}
         <div class="user-session">
             <span>{{ActiveUsername}}</span>

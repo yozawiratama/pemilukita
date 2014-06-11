@@ -85,6 +85,11 @@ Template.app.events({
     'click #btnTVKampanye': function () {
         SetDefaultState();
         Session.set(SessionRef.Name.IsTVKampanye, true);
+    },
+    'click #btnTutup': function (e) {
+        e.preventDefault();
+        ZPanel.hide();
+        $('body').removeClass('modal-open');
     }
 });
 

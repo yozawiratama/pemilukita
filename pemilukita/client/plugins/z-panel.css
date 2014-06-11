@@ -7,10 +7,9 @@
     top: 0;
     z-index: 100;
     background-color: white;
-    border-right: 1px solid #d9534f;
     padding: 30px;
     padding-top: 15px;
-    padding-right: 100px;
+    padding-right: 40px;
     overflow-x: auto;
 }
 .leftpanel-hide {
@@ -31,11 +30,10 @@
     right: 0;
     top: 0;
     z-index: 100;
-    border-left: 1px solid #d9534f;
     background-color: white;
     padding: 30px;
     padding-top: 15px;
-    padding-left: 100px;
+    padding-left: 40px;
     overflow-x: auto;
 }
 .rightpanel-hide {
@@ -44,11 +42,11 @@
 .zpanel-menu {
     position: fixed;
     z-index: 120;
+    left: 50%;
     top: -300px;
-    width: 100%;
+    width: auto;
 }
 .zpanel-menu > div {
     top: 50%;
-    left: 50%;
-    margin-left: -83px;
+    margin-left: -22px;
 }

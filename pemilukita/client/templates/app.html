@@ -114,7 +114,7 @@
                 {{/each}}
                 {{/if}}
                 {{#if IsTVKampanye}}
-                <iframe width="560" height="315" src="//www.youtube.com/embed/{{LeftTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="//www.youtube.com/embed/{{LeftTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
                 <div class="list-group">
                     {{#each LeftTVKampanyeLists}}
                     {{>campaign_video_list_item}}
@@ -235,7 +235,7 @@
                 {{/each}}
                 {{/if}}
                 {{#if IsTVKampanye}}
-                <iframe width="560" height="315" src="//www.youtube.com/embed/{{RightTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src="//www.youtube.com/embed/{{RightTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
                 <div class="list-group">
                     {{#each RightTVKampanyeLists}}
                     {{>campaign_video_list_item}}
@@ -247,24 +247,39 @@
         <div class="zpanel-menu">
             <div class="btn-group-vertical" data-toggle="buttons">
                 <label id="btnBiografi" class="btn btn-default active">
-                    <input type="radio">Data Pribadi
+                    <input type="radio">
+                        <span class="text">Data Pribadi</span>
+                        <i class="fa fa-user"></i>
                 </label>
                 <label id="btnROgranisasi" class="btn btn-default">
-                    <input type="radio">Riwayat Organisasi
+                    <input type="radio">
+                        <span class="text">Riwayat Organisasi</span>
+                        <i class="fa fa-bullhorn"></i>
                 </label>
                 <label id="btnRPekerjaan" class="btn btn-default">
-                    <input type="radio">Riwayat Pekerjaan
+                    <input type="radio">
+                        <span class="text">Riwayat Pekerjaan</span>
+                        <i class="fa fa-building"></i>
                 </label>
                 <label id="btnRPendidikan" class="btn btn-default">
-                    <input type="radio">Riwayat Pendidikan
+                    <input type="radio">
+                        <span class="text">Riwayat Pendidikan</span>
+                        <i class="fa fa-graduation-cap"></i>
                 </label>
                 <label id="btnRPenghargaan" class="btn btn-default">
-                    <input type="radio">Riwayat Penghargaan
+                    <input type="radio">
+                        <span class="text">Riwayat Penghargaan</span>
+                        <i class="fa fa-star-o"></i>
                 </label>
                 <label id="btnTVKampanye" class="btn btn-success">
-                    <input type="radio">TV Kampanye
+                    <input type="radio">
+                        <span class="text" style="background:#47a447; border-color:#398439;">TV Kampanye</span>
+                        <i class="fa fa-video-camera"></i>
                 </label>
-                <button type="button" class="btn btn-danger" onclick="return ZPanel.hide();">Tutup</button>
+                <label id="btnTutup" class="btn btn-danger">
+                    <span class="text" style="background:#d2322d; border-color:#ac2925;">Tutup</span>
+                    x
+                </label>
             </div>
             
 

@@ -9,7 +9,7 @@ ZPanel = {
         $('#userbar').animate({
             top: '-65px'
         }, 400);
-        $('.zpanel-menu').animate({top : '100px'}, 500);
+        $('.zpanel-menu').animate({top : '30%'}, 500);
     },
     hide: function () {
         $('.leftpanel').animate({
