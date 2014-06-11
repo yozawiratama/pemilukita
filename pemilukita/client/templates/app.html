@@ -15,7 +15,22 @@
             <h1 class="zpanel-header">{{LeftHeader}}</h1>
             <div id="leftContent" class="zpanel-body">
                 {{#if IsBiografi}}
+                <dl>
+                    <dt>Agama</dt>
+                    <dd>{{LeftAgama}}</dd>
+                    <dt>Jenis Kelamin</dt>
+                    <dd>{{LeftGender}}</dd>
+                    <dt>Tempat, Tanggal Lahir</dt>
+                    <dd>{{LeftBirthPlace}},{{LeftBirthDate}}</dd>
+                    <dt>Status Perkawinan</dt>
+                    <dd>{{LeftStatusPerkawinan}}</dd>
+                    <dt>Nama Pasangan</dt>
+                    <dd>{{LeftNamaPasangan}}</dd>
+                </dl>
+                <p>
                 {{LeftBiografi}}
+                </p>
+
                 {{/if}}
                 {{#if IsRiwayatOrganisasi}}
                 {{#each LeftRiwayatOrganisasis}}
@@ -123,7 +138,21 @@
             <h1 class="zpanel-header">{{RightHeader}}</h1>
             <div id="rightContent" class="zpanel-body">
                 {{#if IsBiografi}}
+                <dl>
+                    <dt>Agama</dt>
+                    <dd>{{RightAgama}}</dd>
+                    <dt>Jenis Kelamin</dt>
+                    <dd>{{RightGender}}</dd>
+                    <dt>Tempat, Tanggal Lahir</dt>
+                    <dd>{{RightBirthPlace}},{{RightBirthDate}}</dd>
+                    <dt>Status Perkawinan</dt>
+                    <dd>{{RightStatusPerkawinan}}</dd>
+                    <dt>Nama Pasangan</dt>
+                    <dd>{{RightNamaPasangan}}</dd>
+                </dl>
+                <p>
                 {{RightBiografi}}
+                </p>
                 {{/if}}
                 {{#if IsRiwayatOrganisasi}}
                 {{#each RightRiwayatOrganisasis}}

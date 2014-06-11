@@ -25,30 +25,52 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="app.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="app.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/templates/app.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="202" column="29" selection-start="8157" selection-end="8157" vertical-scroll-proportion="-15.708333" vertical-offset="2653" max-vertical-offset="3735">
+                <state line="108" column="41" selection-start="4357" selection-end="4357" vertical-scroll-proportion="-0.18907563" vertical-offset="1755" max-vertical-offset="4170">
                   <folding>
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/accounts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="3" selection-start="313" selection-end="572" vertical-scroll-proportion="0.35479632" vertical-offset="0" max-vertical-offset="761">
+                <state line="11" column="34" selection-start="344" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sao_candidateVote.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/sao_candidateVote.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="7" column="24" selection-start="276" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sao_reasonVote.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/sao_reasonVote.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="92" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="contents.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="4" selection-start="47" selection-end="124" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -57,10 +79,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="123" column="26" selection-start="5081" selection-end="5081" vertical-scroll-proportion="0.4086728" vertical-offset="1534" max-vertical-offset="3450">
+                <state line="49" column="70" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-0.23653089" vertical-offset="915" max-vertical-offset="4605">
                   <folding />
                 </state>
               </provider>
@@ -82,13 +104,15 @@
         <option value="$PROJECT_DIR$/client/pemilukita.html" />
         <option value="$PROJECT_DIR$/client/plugins/z-panel.css" />
         <option value="$PROJECT_DIR$/lib/references.js" />
-        <option value="$PROJECT_DIR$/client/templates/contents.html" />
         <option value="$PROJECT_DIR$/client/scripts/contents.js" />
         <option value="$PROJECT_DIR$/client/scripts/modals.js" />
         <option value="$PROJECT_DIR$/client/templates/modals.html" />
-        <option value="$PROJECT_DIR$/client/scripts/app.js" />
-        <option value="$PROJECT_DIR$/client/templates/app.html" />
+        <option value="$PROJECT_DIR$/server/sao_candidateVote.js" />
+        <option value="$PROJECT_DIR$/server/sao_reasonVote.js" />
         <option value="$PROJECT_DIR$/server/accounts.js" />
+        <option value="$PROJECT_DIR$/client/scripts/app.js" />
+        <option value="$PROJECT_DIR$/client/templates/contents.html" />
+        <option value="$PROJECT_DIR$/client/templates/app.html" />
       </list>
     </option>
   </component>
@@ -247,6 +271,14 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -257,23 +289,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -329,39 +353,17 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/templates/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="97" selection-start="2970" selection-end="2987" vertical-scroll-proportion="0.0" vertical-offset="628" max-vertical-offset="1680">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="41" selection-start="84" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/contents.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="520" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="13" column="4" selection-start="520" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="5" selection-start="22" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="360">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -379,16 +381,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/plugins/z-panel.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="885">
-          <folding />
-        </state>
+        <state line="13" column="21" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="885" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pemilukita.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="735">
-          <folding />
-        </state>
+        <state line="3" column="25" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/references.js">
@@ -400,84 +398,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/modals.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="62" selection-start="1758" selection-end="1758" vertical-scroll-proportion="0.5081301" vertical-offset="0" max-vertical-offset="738">
-          <folding>
-            <element signature="e#49#205#0" expanded="false" />
-            <element signature="e#105#203#0" expanded="false" />
-            <element signature="e#260#420#0" expanded="false" />
-            <element signature="e#316#418#0" expanded="false" />
-            <element signature="e#453#854#0" expanded="false" />
-            <element signature="e#482#852#0" expanded="false" />
-            <element signature="e#692#844#0" expanded="false" />
-            <element signature="e#715#766#0" expanded="false" />
-            <element signature="e#772#834#0" expanded="false" />
-            <element signature="e#904#1036#0" expanded="false" />
-            <element signature="e#992#1034#0" expanded="false" />
-            <element signature="e#1094#1098#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="53" column="62" selection-start="1758" selection-end="1758" vertical-scroll-proportion="0.5081301" vertical-offset="0" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/templates/modals.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="199" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.62184876" vertical-offset="231" max-vertical-offset="960">
-          <folding>
-            <element signature="tag#template#0" expanded="false" />
-            <element signature="e#39#396#0" expanded="false" />
-            <element signature="tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#0;tag#form#0;tag#div#0;tag#div#0;tag#div#0;tag#template#1" expanded="false" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#template#1;n#!!top" expanded="false" />
-            <element signature="tag#div#2;tag#form#0;tag#div#0;tag#div#0;tag#div#0;tag#template#1" expanded="false" />
-          </folding>
-        </state>
+        <state line="86" column="199" selection-start="4338" selection-end="4338" vertical-scroll-proportion="0.62184876" vertical-offset="231" max-vertical-offset="960" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/contents.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="520" selection-end="862" vertical-scroll-proportion="0.2562418" vertical-offset="0" max-vertical-offset="761">
+        <state line="13" column="4" selection-start="520" selection-end="862" vertical-scroll-proportion="0.2562418" vertical-offset="0" max-vertical-offset="761" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="70" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-0.23653089" vertical-offset="915" max-vertical-offset="4605">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
+    <entry file="file://$PROJECT_DIR$/server/sao_candidateVote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="41" selection-start="84" selection-end="107" vertical-scroll-proportion="0.02035278" vertical-offset="0" max-vertical-offset="737">
+        <state line="7" column="24" selection-start="276" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="29" selection-start="8157" selection-end="8157" vertical-scroll-proportion="-15.708333" vertical-offset="2653" max-vertical-offset="3735">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="313" selection-end="572" vertical-scroll-proportion="0.35479632" vertical-offset="0" max-vertical-offset="761">
+        <state line="11" column="34" selection-start="344" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/server/sao_reasonVote.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="26" selection-start="5081" selection-end="5081" vertical-scroll-proportion="0.4086728" vertical-offset="1534" max-vertical-offset="3450">
+        <state line="13" column="92" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="47" selection-end="124" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="41" selection-start="4357" selection-end="4357" vertical-scroll-proportion="-0.18907563" vertical-offset="1755" max-vertical-offset="4170">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

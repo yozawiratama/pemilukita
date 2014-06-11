@@ -94,6 +94,45 @@ Template.app.LeftHeader = function () {
         return data.nama;
     }
 };
+
+Template.app.LeftAgama = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.agama;
+    }
+};
+Template.app.LeftGender = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        if(data.jenis_kelamin == "L")
+        return "Laki-Laki";
+        else return "Perempuan";
+    }
+};
+Template.app.LeftBirthPlace = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.tempat_lahir;
+    }
+};
+Template.app.LeftBirthDate = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.tanggal_lahir;
+    }
+};
+Template.app.LeftStatusPerkawinan = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.status_perkawinan;
+    }
+};
+Template.app.LeftNamaPasangan = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        return data.nama_pasangan;
+    }
+};
 Template.app.LeftBiografi = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
@@ -146,6 +185,44 @@ Template.app.RightHeader = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateRight);
         return data.nama;
+    }
+};
+Template.app.RightAgama = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.agama;
+    }
+};
+Template.app.RightGender = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        if(data.jenis_kelamin == "L")
+            return "Laki-Laki";
+        else return "Perempuan";
+    }
+};
+Template.app.RightBirthPlace = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.tempat_lahir;
+    }
+};
+Template.app.RightBirthDate = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.tanggal_lahir;
+    }
+};
+Template.app.RightStatusPerkawinan = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.status_perkawinan;
+    }
+};
+Template.app.RightNamaPasangan = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        return data.nama_pasangan;
     }
 };
 Template.app.RightBiografi = function () {

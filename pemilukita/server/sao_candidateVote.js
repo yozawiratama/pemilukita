@@ -5,6 +5,7 @@ Meteor.methods({
             Candidate_ID : candidateID,
             Province: province,
             Reason: reason,
+            AmountOfVote : 0,
             CreatedBy: userID,
             CreatedAt: new Date()
         });

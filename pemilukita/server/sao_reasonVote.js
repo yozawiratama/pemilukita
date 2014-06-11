@@ -7,5 +7,13 @@ Meteor.methods({
             CreatedAt: new Date()
         });
 
+        CandidateVotes.update({
+            _id : candidateVoteID
+        },{
+            $set : {
+                AmountOfVote : ReasonVotes.find({CandidateVote_ID: candidateVoteID}).count()
+            }
+        });
+
     }
 });
