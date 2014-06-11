@@ -15,11 +15,14 @@ Template.modal_candidate_info.Biografi = function () {
 Template.modal_coblos.events({
     'submit': function (e) {
         e.preventDefault();
+        $('.btn-coblos').attr('disabled', 'disabled');
         Meteor.call('CandidateVotesInsert', Meteor.userId(), Session.get(SessionRef.Name.SelectedCandidateID), $('#selProvinsi').val(), $('#txaReason').val(), function (err, data) {
             if (err) {
                 alert(err.message);
+                $('.btn-coblos').removeAttr('disabled', 'disabled');
             } else {
                 $('#mdlCoblos').modal('hide');
+                $('.btn-coblos').removeAttr('disabled', 'disabled');
             }
         });
     }
