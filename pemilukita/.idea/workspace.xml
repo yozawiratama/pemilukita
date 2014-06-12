@@ -25,25 +25,29 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="app.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="app.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/templates/app.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="108" column="41" selection-start="4357" selection-end="4357" vertical-scroll-proportion="-0.18907563" vertical-offset="1755" max-vertical-offset="4170">
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                  </folding>
+                <state line="130" column="51" selection-start="5231" selection-end="5231" vertical-scroll-proportion="0.0" vertical-offset="1950" max-vertical-offset="4170">
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="navbar.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/templates/navbar.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="330">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="accounts.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/accounts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="34" selection-start="344" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
+                <state line="18" column="3" selection-start="572" selection-end="572" vertical-scroll-proportion="0.20325203" vertical-offset="0" max-vertical-offset="738">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -51,7 +55,7 @@
           <file leaf-file-name="sao_candidateVote.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/sao_candidateVote.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="24" selection-start="276" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+                <state line="7" column="24" selection-start="276" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="285">
                   <folding />
                 </state>
               </provider>
@@ -60,7 +64,7 @@
           <file leaf-file-name="sao_reasonVote.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/sao_reasonVote.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="92" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+                <state line="13" column="92" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="360">
                   <folding />
                 </state>
               </provider>
@@ -69,7 +73,7 @@
           <file leaf-file-name="contents.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="4" selection-start="47" selection-end="124" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+                <state line="1" column="4" selection-start="47" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
                   <folding />
                 </state>
               </provider>
@@ -271,14 +275,6 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -289,15 +285,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -353,25 +357,16 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/scripts/contents.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="4" selection-start="520" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="330" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="5" selection-start="22" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="360">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/local/build/programs/client/packages/global-imports.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.33508542" vertical-offset="0" max-vertical-offset="761">
-          <folding />
-        </state>
+        <state line="17" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.33508542" vertical-offset="0" max-vertical-offset="761" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/globals.js">
@@ -391,9 +386,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/references.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="64" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
+        <state line="9" column="64" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/scripts/modals.js">
@@ -411,26 +404,10 @@
         <state line="13" column="4" selection-start="520" selection-end="862" vertical-scroll-proportion="0.2562418" vertical-offset="0" max-vertical-offset="761" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="70" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-0.23653089" vertical-offset="915" max-vertical-offset="4605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/sao_candidateVote.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="24" selection-start="276" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/accounts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="344" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -441,20 +418,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
+    <entry file="file://$PROJECT_DIR$/client/templates/app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="47" selection-end="124" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="120">
+        <state line="130" column="51" selection-start="5231" selection-end="5231" vertical-scroll-proportion="0.0" vertical-offset="1950" max-vertical-offset="4170">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/templates/app.html">
+    <entry file="file://$PROJECT_DIR$/client/templates/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="41" selection-start="4357" selection-end="4357" vertical-scroll-proportion="-0.18907563" vertical-offset="1755" max-vertical-offset="4170">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="12" column="0" selection-start="724" selection-end="724" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/templates/contents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="47" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="70" selection-start="2282" selection-end="2282" vertical-scroll-proportion="-0.23653089" vertical-offset="915" max-vertical-offset="4605">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="3" selection-start="572" selection-end="572" vertical-scroll-proportion="0.20325203" vertical-offset="0" max-vertical-offset="738">
+          <folding />
         </state>
       </provider>
     </entry>
