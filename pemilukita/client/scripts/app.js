@@ -8,9 +8,7 @@ Template.app.rendered = function () {
         Session.set(SessionRef.Name.ActiveCandidateLeft, data.data.results.caleg[3]);
         Session.set(SessionRef.Name.ActiveCandidateRight, data.data.results.caleg[2]);
     });
-    $.getJSON("http://api.pemiluapi.org/candidate/api/provinsi?apiKey=" + DataRef.ApiKey, function (data) {
-        Session.set(SessionRef.Name.ListAllProvinces, data.data.results);
-    });
+
     $.getJSON("http://api.pemiluapi.org/calonpresiden/api/videos?apiKey=" + DataRef.ApiKey, function (data) {
         Session.set(SessionRef.Name.ListAllCampaignVideos, data.data.results);
         var ps = [];

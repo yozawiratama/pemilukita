@@ -161,11 +161,21 @@ Template.versus.IsVoted = function () {
 Template.versus.SatuReasons = function () {
     return CandidateVotes.find({
         Candidate_ID: 1
+    },{
+        sort : {
+            AmountOfVote : -1
+        }
+
     });
 }
 Template.versus.DuaReasons = function () {
     return CandidateVotes.find({
         Candidate_ID: 2
+    },{
+        sort : {
+            AmountOfVote : -1
+        }
+
     });
 }
 Template.versus.HasCoblos = function () {

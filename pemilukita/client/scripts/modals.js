@@ -28,6 +28,12 @@ Template.modal_coblos.events({
     }
 });
 
+Template.modal_coblos.rendered = function(){
+    $.getJSON("http://api.pemiluapi.org/candidate/api/provinsi?apiKey=" + DataRef.ApiKey, function (data) {
+        Session.set(SessionRef.Name.ListAllProvinces, data.data.results);
+    });
+};
+
 Template.modal_coblos.Provinces = function () {
     var provinces = Session.get(SessionRef.Name.ListAllProvinces);
     if (provinces) {
