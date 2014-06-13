@@ -24,6 +24,7 @@
     bottom: 0;
 }
 .cover .nav-container {
+    pointer-events:none;
     z-index: 100;
     position: absolute;
     text-align: center;
@@ -32,6 +33,7 @@
     top: 65%;
 }
 .cover .nav-container .nav-down {
+    pointer-events:auto;
     cursor: pointer;
     margin-top: 0px;
     text-decoration: none;
@@ -298,6 +300,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
     border: solid 0px;
     margin-right:-5px;
     margin-left:10px;
+}
+
+.coblosBtn {
+    z-index: 99;
+    position: absolute;
+    width:100%;
+    text-align: center;
+}
+
+.coblosBtn div {
+    height:100%;   
+}
+
+.coblosBtn .kiri .btn-coblos,
+.coblosBtn .kanan .btn-coblos{
+    opacity: 0;
+    margin-top: 35%;
+    text-decoration: none;
+    background: rgb(63, 154, 59);
+    border-radius: 50%;
+    border: 0px solid;
+    color: #fff;
+    width:180px;
+    height:180px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all ease-out 300ms;
+    -moz-transition: all ease-out 300ms;
+    -o-transition: all ease-out 300ms;
+    transition: all ease-out 300ms;   
+}
+
+.coblosBtn .kiri:hover .btn-coblos:hover,
+.coblosBtn .kanan:hover .btn-coblos:hover {
+    background: rgb(41, 186, 38);
+    margin-top: 32%;
+    width:200px;
+    height:200px;
+}
+
+.coblosBtn .kiri:hover .btn-coblos,
+.coblosBtn .kanan:hover .btn-coblos {
+    opacity: 1;
+    margin-top: 33%;
+}
+.coblosBtn .kiri,
+.coblosBtn .kanan{
+    background: rgba(0, 0, 0, 0);
+}
+.coblosBtn .kiri:hover,
+.coblosBtn .kanan:hover{
+    background: rgba(0, 0, 0, 0.2);
+     -webkit-transition: all ease-out 300ms;
+    -moz-transition: all ease-out 300ms;
+    -o-transition: all ease-out 300ms;
+    transition: all ease-out 300ms;
 }
 
 /* FOOTER */

@@ -96,29 +96,39 @@
             </div>
         </div>-->
     </div>
-    <div class="container-fluid vote-bar">
+    <div class="container-fluid coblosBtn">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 kiri">
                 {{#if IsVoted}}
-                <div class="col-md-12" style="padding-left:0px">
-                    <div class="vote-name">PRABOWO-HATTA</div>
-                </div>
+                
                 {{else}}
                 <div class="col-md-12" style="padding-left:0px">
-                    <button id="btnVote1" class="btn btn-danger btn-block btn-lg">PILIH PRABOWO-HATTA</button>
+                    <button id="btnVote1" class="btn-coblos"><i class="fa fa-5x fa-check"></i><br/>Coblos</button>
                 </div>
                 {{/if}}
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 kanan">
                 {{#if IsVoted}}
+                
+                {{else}}
+                <div class="col-md-12" style="padding-right:0px">
+                    <button id="btnVote2" class="btn-coblos"><i class="fa fa-5x fa-check"></i><br/>Coblos</button>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid vote-bar">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12" style="padding-left:0px">
+                    <div class="vote-name">PRABOWO-HATTA</div>
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div class="col-md-12" style="padding-left:0px">
                     <div class="vote-name">JOKOWI-JK</div>
                 </div>
-                {{else}}
-                <div class="col-md-12" style="padding-right:0px">
-                    <button id="btnVote2" class="btn btn-danger btn-block btn-lg">PILIH JOKOWI-JK</button>
-                </div>
-                {{/if}}
             </div>
         </div>
     </div>

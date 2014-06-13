@@ -11,6 +11,8 @@ Template.versus.rendered = function () {
     $('.capres').css('height', window.innerHeight);
     $('.info').css('height', window.innerHeight);
     $('.vote-bar').css('top', window.innerHeight*2 - $('.vote-bar').height());
+    $('.coblosBtn').css('top', window.innerHeight);
+    $('.coblosBtn').css('height', window.innerHeight);
     
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
