@@ -96,28 +96,24 @@
             </div>
         </div>-->
     </div>
+    {{#if IsVoted}}
+                
+    {{else}}
     <div class="container-fluid coblosBtn">
         <div class="row">
             <div class="col-md-6 kiri">
-                {{#if IsVoted}}
-                
-                {{else}}
                 <div class="col-md-12" style="padding-left:0px">
                     <button id="btnVote1" class="btn-coblos"><i class="fa fa-5x fa-check"></i><br/>Coblos</button>
                 </div>
-                {{/if}}
             </div>
             <div class="col-md-6 kanan">
-                {{#if IsVoted}}
-                
-                {{else}}
                 <div class="col-md-12" style="padding-right:0px">
                     <button id="btnVote2" class="btn-coblos"><i class="fa fa-5x fa-check"></i><br/>Coblos</button>
                 </div>
-                {{/if}}
             </div>
         </div>
     </div>
+    {{/if}}
     <div class="container-fluid vote-bar">
         <div class="row">
             <div class="col-md-6">
