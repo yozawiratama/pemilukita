@@ -7,9 +7,11 @@
         {{#if IsLoggedIn}}
         <div class="user-session">
             <span>{{ActiveUsername}}</span>
+            <button id="getStamps" class="btn btn-success" data-toggle="modal" data-target="#mdlStamps">Promote Us!</button>
             <button id="btnLogout" class="btn btn-danger">Logout</button>
         </div>
         {{else}}
+        <button id="getStamps" class="btn btn-success" data-toggle="modal" data-target="#mdlStamps">Promote Us!</button>
         <button data-target="#mdlLoginTerms" data-toggle="modal" class="btn btn-danger">
             <i class="fa fa-lg fa-fw fa-google-plus"></i>&nbsp;&nbsp;Login with google</button>
 

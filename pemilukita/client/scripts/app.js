@@ -2,11 +2,42 @@ Template.app.created = function () {
     SetDefaultState();
 };
 Template.app.rendered = function () {
+    //presidential
     Session.set(SessionRef.Name.IsBiografi, true);
     $.getJSON("http://api.pemiluapi.org/calonpresiden/api/caleg?apiKey=" + DataRef.ApiKey, function (data) {
         Session.set(SessionRef.Name.PresidentialCandidate, data.data.results);
         Session.set(SessionRef.Name.ActiveCandidateLeft, data.data.results.caleg[3]);
         Session.set(SessionRef.Name.ActiveCandidateRight, data.data.results.caleg[2]);
+    });
+    $.getJSON("http://api.pemiluapi.org/calonpresiden/api/promises?apiKey=" + DataRef.ApiKey, function (data) {
+        Session.set(SessionRef.Name.Promises, data.data.results);
+        var ps = [];
+        var hr = [];
+        var jw = [];
+        var jk = [];
+        var psCounter = 0;
+        var hrCounter = 0;
+        var jwCounter = 0;
+        var jkCounter = 0;
+        for (var ii = 0; ii < data.data.results.count; ii++) {
+            if (data.data.results.promises[ii].id_calon == "ps") {
+                ps[psCounter] = data.data.results.promises[ii];
+                psCounter++;
+            } else if (data.data.results.promises[ii].id_calon == "hr") {
+                hr[hrCounter] = data.data.results.promises[ii];
+                hrCounter++;
+            } else if (data.data.results.promises[ii].id_calon == "jw") {
+                jw[jwCounter] = data.data.results.promises[ii];
+                jwCounter++;
+            } else if (data.data.results.promises[ii].id_calon == "jk") {
+                jk[jkCounter] = data.data.results.promises[ii];
+                jkCounter++;
+            }
+        }
+        Session.set(SessionRef.Name.ListPrabowoPromises, ps);
+        Session.set(SessionRef.Name.ListHattaPromises, hr);
+        Session.set(SessionRef.Name.ListJokowiPromises, jw);
+        Session.set(SessionRef.Name.ListJKPromises, jk);
     });
 
     $.getJSON("http://api.pemiluapi.org/calonpresiden/api/videos?apiKey=" + DataRef.ApiKey, function (data) {
@@ -23,16 +54,13 @@ Template.app.rendered = function () {
             if (data.data.results.videos[ii].id_calon[0] == "ps") {
                 ps[psCounter] = data.data.results.videos[ii];
                 psCounter++;
-            }
-            else if (data.data.results.videos[ii].id_calon[0] == "hr") {
+            } else if (data.data.results.videos[ii].id_calon[0] == "hr") {
                 hr[hrCounter] = data.data.results.videos[ii];
                 hrCounter++;
-            }
-            else if (data.data.results.videos[ii].id_calon[0] == "jw") {
+            } else if (data.data.results.videos[ii].id_calon[0] == "jw") {
                 jw[jwCounter] = data.data.results.videos[ii];
                 jwCounter++;
-            }
-            else if (data.data.results.videos[ii].id_calon[0] == "jk") {
+            } else if (data.data.results.videos[ii].id_calon[0] == "jk") {
                 jk[jkCounter] = data.data.results.videos[ii];
                 jkCounter++;
             }
@@ -42,8 +70,55 @@ Template.app.rendered = function () {
         Session.set(SessionRef.Name.ListJokowiCampaignVideos, jw);
         Session.set(SessionRef.Name.ListJKCampaignVideos, jk);
     });
+    //socmed
+//    $.getJSON("http://api.pemiluapi.org/socmedpemilu?apiKey=" + DataRef.ApiKey, function (data) {
+//        Session.set(SessionRef.Name.SocialMedia, data.data.results);
+//    });
+    //stamps
+    $.getJSON("http://api.pemiluapi.org/stamps/api/stamps?apiKey=" + DataRef.ApiKey, function (data) {
+        resultData = data.data.results;
+        Session.set(SessionRef.Name.Stamps, data.data.results);
+        var res = [];
+        for(var ii = 0; ii < 5;ii++){
+        res[ii] = resultData.stamps[getRandomInt(0, resultData.count)]
+        }
+        Session.set(SessionRef.Name.StampsRandomized,res);
+    });
+    //campaign finance
+    $.getJSON("http://api.pemiluapi.org/campaignfinance/api/contributions?apiKey=" + DataRef.ApiKey, function (data) {
+        //        Session.set(SessionRef.Name.PresidentialCandidate, data.data.results);
+    });
+    //pelanggaran
+    $.getJSON("http://api.pemiluapi.org/laporan_pelanggaran/api/reports?apiKey=" + DataRef.ApiKey, function (data) {
+        Session.set(SessionRef.Name.Pelanggaran, data.data.results);
+    });
+    //candidate
+    $.getJSON("http://api.pemiluapi.org/candidate/api/caleg?apiKey=" + DataRef.ApiKey, function (data) {
+        //        Session.set(SessionRef.Name.PresidentialCandidate, data.data.results);
+    });
+    //geograph
+    $.getJSON("http://api.pemiluapi.org/geographic/api/caleg?apiKey=" + DataRef.ApiKey, function (data) {
+        //        Session.set(SessionRef.Name.PresidentialCandidate, data.data.results);
+    });
+    //FAQ
+    $.getJSON("http://api.pemiluapi.org/faq-presiden/api/questions?apiKey=" + DataRef.ApiKey, function (data) {
+        Session.set(SessionRef.Name.FAQ, data.data.results);
+    });
+    //Pertanyaan
+    $.getJSON("http://api.pemiluapi.org/pertanyaan/api/questions?apiKey=" + DataRef.ApiKey, function (data) {
+        Session.set(SessionRef.Name.Pertanyaan, data.data.results);
+    });
+    //Pendidikan
+    $.getJSON("http://api.pemiluapi.org/pendidikan/api/pertanyaan?apiKey=" + DataRef.ApiKey, function (data) {
+        //        Session.set(SessionRef.Name.PresidentialCandidate, data.data.results);
+    });
+    //Berita
+    $.getJSON("http://api.pemiluapi.org/berita?json=get_recent_posts&apiKey=" + DataRef.ApiKey, function (data) {
+        //        Session.set(SessionRef.Name.PresidentialCandidate, data.data.results);
+    });
 };
 Template.app.events({
+
     'click #btnPrabowoInfo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
         Session.set(SessionRef.Name.ActiveCandidateLeft, data.caleg[3]);
@@ -80,6 +155,10 @@ Template.app.events({
         SetDefaultState();
         Session.set(SessionRef.Name.IsRiwayatPenghargaan, true);
     },
+    'click #btnPromises': function () {
+        SetDefaultState();
+        Session.set(SessionRef.Name.IsPromises, true);
+    },
     'click #btnTVKampanye': function () {
         SetDefaultState();
         Session.set(SessionRef.Name.IsTVKampanye, true);
@@ -88,7 +167,12 @@ Template.app.events({
         e.preventDefault();
         ZPanel.hide();
         $('body').removeClass('modal-open');
-    }
+    },
+    'click .toppanel-close' : function(){
+        
+        ZPanel.hideTop();
+        $('body').removeClass('modal-open');
+    },
 });
 
 Template.app.LeftHeader = function () {
@@ -107,8 +191,8 @@ Template.app.LeftAgama = function () {
 Template.app.LeftGender = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
-        if(data.jenis_kelamin == "L")
-        return "Laki-Laki";
+        if (data.jenis_kelamin == "L")
+            return "Laki-Laki";
         else return "Perempuan";
     }
 };
@@ -166,16 +250,26 @@ Template.app.LeftIsRiwayatPenghargaans = function () {
         return data.riwayat_penghargaan;
     }
 };
+Template.app.LeftPromises = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
+        if (data.id == "ps") {
+            return Session.get(SessionRef.Name.ListPrabowoPromises);
+
+        } else {
+            return Session.get(SessionRef.Name.ListHattaPromises);
+        }
+    }
+};
 Template.app.LeftTVKampanyeLists = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateLeft)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateLeft);
-        if (data.id == "ps"){
+        if (data.id == "ps") {
             Session.set(SessionRef.Name.ActiveCampaignVideoIdLeft, getYoutubeID(Session.get(SessionRef.Name.ListPrabowoCampaignVideos)[1].url_video));
             return Session.get(SessionRef.Name.ListPrabowoCampaignVideos);
 
-        }
-        else{
-            Session.set(SessionRef.Name.ActiveCampaignVideoIdLeft, getYoutubeID(Session.get(SessionRef.Name.ListHattaCampaignVideos)[0].url_video));
+        } else {
+            Session.set(SessionRef.Name.ActiveCampaignVideoIdLeft, getYoutubeID(Session.get(SessionRef.Name.ListHattaCampaignVideos)[1].url_video));
             return Session.get(SessionRef.Name.ListHattaCampaignVideos);
         }
     }
@@ -199,7 +293,7 @@ Template.app.RightAgama = function () {
 Template.app.RightGender = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateRight);
-        if(data.jenis_kelamin == "L")
+        if (data.jenis_kelamin == "L")
             return "Laki-Laki";
         else return "Perempuan";
     }
@@ -258,14 +352,23 @@ Template.app.RightRiwayatPenghargaans = function () {
         return data.riwayat_penghargaan;
     }
 };
+Template.app.RightPromises = function () {
+    if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
+        var data = Session.get(SessionRef.Name.ActiveCandidateRight);
+        if (data.id == "jw") {
+            return Session.get(SessionRef.Name.ListJokowiPromises);
+        } else {
+            return Session.get(SessionRef.Name.ListJKPromises);
+        }
+    }
+};
 Template.app.RightTVKampanyeLists = function () {
     if (Session.get(SessionRef.Name.ActiveCandidateRight)) {
         var data = Session.get(SessionRef.Name.ActiveCandidateRight);
-        if (data.id == "jw"){
+        if (data.id == "jw") {
             Session.set(SessionRef.Name.ActiveCampaignVideoIdRight, getYoutubeID(Session.get(SessionRef.Name.ListJokowiCampaignVideos)[1].url_video));
             return Session.get(SessionRef.Name.ListJokowiCampaignVideos);
-        }
-        else{
+        } else {
             Session.set(SessionRef.Name.ActiveCampaignVideoIdRight, getYoutubeID(Session.get(SessionRef.Name.ListJKCampaignVideos)[1].url_video));
             return Session.get(SessionRef.Name.ListJKCampaignVideos);
         }
@@ -291,8 +394,29 @@ Template.app.IsRiwayatPendidikan = function () {
 Template.app.IsRiwayatPenghargaan = function () {
     return Session.get(SessionRef.Name.IsRiwayatPenghargaan);
 };
+Template.app.IsPromises = function () {
+    return Session.get(SessionRef.Name.IsPromises);
+};
 Template.app.IsTVKampanye = function () {
     return Session.get(SessionRef.Name.IsTVKampanye);
+};
+
+Template.app.IsFAQ = function () {
+    return Session.get(SessionRef.Name.IsFAQ);
+};
+Template.app.IsPertanyaan = function () {
+    return Session.get(SessionRef.Name.IsPertanyaan);
+};
+
+Template.app.FAQs = function () {
+    var data = Session.get(SessionRef.Name.FAQ);
+    console.log(data);
+    return data.questions;
+};
+Template.app.Pertanyaans = function () {
+    var data = Session.get(SessionRef.Name.Pertanyaan);
+    console.log(data);
+    return data.questions;
 };
 
 function SetDefaultState() {
@@ -301,5 +425,6 @@ function SetDefaultState() {
     Session.set(SessionRef.Name.IsRiwayatPekerjaan, false);
     Session.set(SessionRef.Name.IsRiwayatPendidikan, false);
     Session.set(SessionRef.Name.IsRiwayatPenghargaan, false);
+    Session.set(SessionRef.Name.IsPromises, false);
     Session.set(SessionRef.Name.IsTVKampanye, false);
 }

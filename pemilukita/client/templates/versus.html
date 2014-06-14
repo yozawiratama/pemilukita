@@ -1,6 +1,25 @@
 <template name="versus">
     <div class="container-fluid cover">
         <img class="row cover-overlay" src="/img/indonesia.png">
+        <div class="pertanyaan-container">
+            <a href="" class="nav-pertanyaan">
+                <i class="mnu fa fa-question fa-4x"></i>
+            </a>
+        </div><div class="faq-container">
+            <a href="" class="nav-faq">
+                <i class="mnu fa fa-question fa-4x"></i>
+            </a>
+        </div>
+        <div class="close-container">
+            <a href="" class="nav-close">
+                <p style="font-size:32px;">X</p>
+            </a>
+        </div>
+        <div class="menu-container">
+            <a href="" class="nav-menu">
+                <i class="mnu fa fa-circle" style="margin-left:13px"></i><i class="mnu fa fa-circle"></i><i class="mnu fa fa-circle"></i>
+            </a>
+        </div>
         <div class="nav-container">
             <a href="" class="nav-down">
                 <i class="dwn fa fa-angle-down fa-5x"></i>
@@ -96,10 +115,10 @@
             </div>
         </div>-->
     </div>
-    {{#if IsVoted}}
-                
-    {{else}}
     <div class="container-fluid coblosBtn">
+        {{#if IsVoted}}
+                
+        {{else}}
         <div class="row">
             <div class="col-md-6 kiri">
                 <div class="col-md-12" style="padding-left:0px">
@@ -112,8 +131,8 @@
                 </div>
             </div>
         </div>
+        {{/if}}
     </div>
-    {{/if}}
     <div class="container-fluid vote-bar">
         <div class="row">
             <div class="col-md-6">

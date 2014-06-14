@@ -28,7 +28,7 @@ Template.modal_coblos.events({
     }
 });
 
-Template.modal_coblos.rendered = function(){
+Template.modal_coblos.rendered = function () {
     $.getJSON("http://api.pemiluapi.org/candidate/api/provinsi?apiKey=" + DataRef.ApiKey, function (data) {
         Session.set(SessionRef.Name.ListAllProvinces, data.data.results);
     });
@@ -63,5 +63,30 @@ Template.modal_kebijakan_privasi.events({
                     $('#cbxTermsLogin').removeAttr('checked');
             });
         }
+    }
+});
+
+Template.modal_stamps.events({
+    'click #btnStampsRandomMore': function () {
+        var resultData = Session.get(SessionRef.Name.Stamps);
+        var res = [];
+        for (var ii = 0; ii < 9; ii++) {
+            res[ii] = resultData.stamps[getRandomInt(0, resultData.count)]
+        }
+        Session.set(SessionRef.Name.StampsRandomized, res);
+    }
+});
+
+Template.modal_stamps.Stamps = function () {
+    if (Session.get(SessionRef.Name.Stamps))
+        return Session.get(SessionRef.Name.StampsRandomized);
+};
+Template.modal_stamps.SelectedStamps = function () {
+    return Session.get(SessionRef.Name.SelectedStamps).url_small;
+};
+Template.ctn_stamps.events({
+    'click img': function () {
+        console.log(this);
+        Session.set(SessionRef.Name.SelectedStamps, this);
     }
 });

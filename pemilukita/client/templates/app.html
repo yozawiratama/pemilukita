@@ -1,6 +1,26 @@
 <template name="app">
     <div>
-        {{>navbar}} {{>versus}} {{>modal_candidate_info}} {{>modal_coblos}}
+        {{>navbar}} {{>versus}} 
+        <div class="toppanel toppanel-hide">
+            <div class="toppanel-close"><p>X</p></div>
+            {{#if IsFAQ}}
+                <h3>FAQ Presidensial</h3>
+                {{#each FAQs}}
+                <h4 class="faq-q">{{question}}</h4>
+                <p class="faq-a">{{answer}}</p>
+                <p class="faq-ref">Referensi Hukum: {{reference_law}}</p><br/>
+                {{/each}}
+            {{/if}}
+            {{#if IsPertanyaan}}
+            <h3>FAQ Umum</h3>
+            {{#each Pertanyaans}}
+            <h4 class="faq-q">{{question}}</h4>
+            <p class="faq-a">{{answer}}</p>
+            <p class="faq-ref">Referensi Hukum: {{reference_law}}</p>
+<!--            {{excerpt_law}}-->
+            {{/each}}
+            {{/if}}
+        </div>
         <div class="leftpanel leftpanel-hide">
             <center>
                 <div class="btn-group" data-toggle="buttons">
@@ -112,6 +132,17 @@
                     </div>
                 </div>
                 {{/each}}
+                {{/if}}
+                {{#if IsPromises}}
+                <ul style="padding-left:10px;">
+                {{#each LeftPromises}}
+                <li>    
+                    <h4 style="color:#D7402C; margin-top:20px; margin-bottom:0px;">{{context_janji}}</h4>
+                    <p style="margin-bottom:0px;">{{janji}}</p>
+                    <p style="color:#555; font-size:12px; margin-bottom:10px;"><a href="{{url_sumber}}">Sumber</a> ({{tanggal}})</p>
+                </li>
+                {{/each}}
+                </ul>
                 {{/if}}
                 {{#if IsTVKampanye}}
                 <iframe width="100%" height="315" src="//www.youtube.com/embed/{{LeftTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
@@ -234,6 +265,18 @@
                 </div>
                 {{/each}}
                 {{/if}}
+                {{#if IsPromises}}
+                <ul style="padding-left:10px;">
+                {{#each RightPromises}}
+                <li>
+                <h4 style="color:#FFF; margin-top:20px; margin-bottom:0px;">{{context_janji}}</h4>
+                <p style="color:#FFF;margin-bottom:0px;">{{janji}}</p>
+                <p style="color:#FFF; font-size:12px; margin-bottom:10px;"><a href="{{url_sumber}}">Sumber</a> ({{tanggal}})</p>
+                </li>
+                {{/each}}
+                </ul>
+                {{/if}}
+                
                 {{#if IsTVKampanye}}
                 <iframe width="100%" height="315" src="//www.youtube.com/embed/{{RightTVKampanyeID}}" frameborder="0" allowfullscreen></iframe>
                 <div class="list-group">
@@ -271,6 +314,11 @@
                         <span class="text">Riwayat Penghargaan</span>
                         <i class="fa fa-star-o"></i>
                 </label>
+                <label id="btnPromises" class="btn btn-primary">
+                    <input type="radio">
+                        <span class="text" style="background:#3276b1; border-color:#285e8e;">Janji-Janji</span>
+                        <i class="fa fa-comment"></i>
+                </label>
                 <label id="btnTVKampanye" class="btn btn-success">
                     <input type="radio">
                         <span class="text" style="background:#47a447; border-color:#398439;">TV Kampanye</span>
@@ -285,4 +333,5 @@
 
         </div>
     </div>
+    {{>modal_candidate_info}} {{>modal_coblos}}{{>modal_stamps}}
 </template>

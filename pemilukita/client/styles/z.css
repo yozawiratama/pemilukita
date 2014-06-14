@@ -30,6 +30,20 @@
     text-align: center;
     left: 0;
     right: 0;
+    top: 78%;
+}
+
+.cover .menu-container,
+.cover .faq-container,
+.cover .close-container,
+.cover .pertanyaan-container
+{
+    pointer-events:none;
+    z-index: 100;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
     top: 65%;
 }
 .cover .nav-container .nav-down {
@@ -55,11 +69,71 @@
     -o-transition: all ease-out 300ms;
     transition: all ease-out 300ms;
 }
+.cover .menu-container .nav-menu,
+.cover .faq-container .nav-faq,
+.cover .pertanyaan-container .nav-pertanyaan{
+    pointer-events:auto;
+    cursor: pointer;
+    margin-top: 0px;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    background: #D7402C;
+    border-radius: 50%;
+    border: 2px #D7402C solid;
+    color: #FFF;
+    width:80px;
+    height:80px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: all ease-out 300ms;
+    -moz-transition: all ease-out 300ms;
+    -o-transition: all ease-out 300ms;
+    transition: all ease-out 300ms;
+}
+.cover .close-container .nav-close {
+    opacity: 0;   
+    pointer-events:auto;
+    cursor: pointer;
+    margin-top: 0px;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    background: #D7402C;
+    border-radius: 50%;
+    border: 2px #D7402C solid;
+    color: #FFF;
+    width:80px;
+    height:80px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: all ease-out 300ms;
+    -moz-transition: all ease-out 300ms;
+    -o-transition: all ease-out 300ms;
+    transition: all ease-out 300ms;
+}
 .cover .nav-container .nav-down .dwn {
     margin:auto;
 }
 .cover .nav-container .nav-down .src {
     display: none;
+    margin:auto;
+}
+
+.cover .menu-container .nav-menu .mnu {
+    margin:auto;
+    margin-right:3px;
+    margin-left:3px;
+}
+.cover .faq-container .nav-faq .mnu,
+.cover .pertanyaan-container .nav-pertanyaan .mnu,
+.cover .close-container .nav-close p{
     margin:auto;
 }
 .cover .cover-caption {
@@ -74,6 +148,16 @@
     color: #fff;
     background: rgb(215, 64, 44);
 }
+
+.cover .menu-container .nav-menu:hover,
+.cover .faq-container .nav-faq:hover,
+.cover .pertanyaan-container .nav-pertanyaan:hover,
+.cover .close-container .nav-close:hover{
+    color: #D7402C;
+    background: #FFF;
+    border: 2px #D7402C solid;
+}
+
 
 .cover .nav-container .banding:hover {
     width: 170px;
@@ -361,6 +445,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
     transition: all ease-out 300ms;
 }
 
+
+.faq-q {
+    color:#D7402C;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.faq-a {
+    color:#333;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.faq-ref {
+    color:#555;
+    margin-bottom: 10px;
+}
 /* FOOTER */
 
 .footer {

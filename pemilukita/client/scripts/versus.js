@@ -18,7 +18,7 @@ Template.versus.rendered = function () {
         var scroll = $(window).scrollTop();
         
         if(scroll <= $('.vote-bar').offset().top-180) {
-            $('.nav-container').css('top', navtop + (scroll*0.7));
+            $('.nav-container').css('top', navtop + (scroll*0.55));
         }
         $('.cover-caption').css('top', logotop + -(scroll*0.45));
         
@@ -76,6 +76,18 @@ Template.versus.rendered = function () {
     });
 };
 Template.versus.events({
+    'click .nav-faq' : function(){
+        SetDefaultMenuState();
+        Session.set(SessionRef.Name.IsFAQ, true);
+        ZPanel.showTop();
+        $('body').addClass('modal-open');
+    },
+    'click .nav-pertanyaan' : function(){
+        SetDefaultMenuState();
+        Session.set(SessionRef.Name.IsPertanyaan, true);
+        ZPanel.showTop();
+        $('body').addClass('modal-open');
+    },
     'click .nav-down.banding': function (e) {
         e.preventDefault();
         ZPanel.show();
@@ -84,6 +96,20 @@ Template.versus.events({
     'click .nav-down': function (e) {
         e.preventDefault();
         $(window).scrollTo('.info', 1000);
+    },
+    'click .nav-menu': function (e) {
+        e.preventDefault();
+        $('.nav-faq').css('margin-right', '175px');
+        $('.nav-pertanyaan').css('margin-left', '175px');
+        $('.nav-menu').css('opacity', 0).css('pointer-events', 'none');
+        $('.nav-close').css('opacity', 1).css('pointer-events', 'auto');
+    },
+    'click .nav-close': function (e) {
+        e.preventDefault();
+        $('.nav-faq').css('margin-right', '');
+        $('.nav-pertanyaan').css('margin-left', '');
+        $('.nav-menu').css('opacity', 1).css('pointer-events', 'auto');
+        $('.nav-close').css('opacity', 0).css('pointer-events', 'none');
     },
     'click #btnBukaPrabowo': function () {
         var data = Session.get(SessionRef.Name.PresidentialCandidate);
@@ -190,4 +216,8 @@ Template.versus.HasCoblos = function () {
         } else return false;
     } else return false;
 
+}
+function SetDefaultMenuState (){
+Session.set(SessionRef.Name.IsFAQ, false);
+Session.set(SessionRef.Name.IsPertanyaan, false);
 }
