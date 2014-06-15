@@ -82,6 +82,7 @@ Template.modal_stamps.Stamps = function () {
         return Session.get(SessionRef.Name.StampsRandomized);
 };
 Template.modal_stamps.SelectedStamps = function () {
+    if(Session.get(SessionRef.Name.SelectedStamps))
     return Session.get(SessionRef.Name.SelectedStamps).url_small;
 };
 Template.ctn_stamps.events({
