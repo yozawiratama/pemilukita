@@ -189,6 +189,7 @@
 }
 
 .btn-coblos {
+    z-index: 90;
     position: fixed;
     bottom:15px;
     right:15px;
