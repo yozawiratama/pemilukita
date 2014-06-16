@@ -1,0 +1,211 @@
+.cover {
+    overflow: hidden;
+    position: relative;
+    min-width:480px;
+    width:100%;
+    height:350px;
+    background: -moz-linear-gradient(top,  rgba(237,237,237,1) 0%, rgba(255,255,255,1) 80%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(237,237,237,1)), color-stop(80%,rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(255,255,255,1) 80%);
+    background: -o-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(255,255,255,1) 80%);
+    background: -ms-linear-gradient(top,  rgba(237,237,237,1) 0%,rgba(255,255,255,1) 80%);
+    background: linear-gradient(to bottom,  rgba(237,237,237,1) 0%,rgba(255,255,255,1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 );
+}
+
+.cover .overlay {
+    top:8%;
+    position: absolute;
+    width:100%;   
+}
+
+.cover div,
+.cover div div {
+    height:100%;
+}
+
+.cover .capres1 {
+    position: absolute;
+    height:235px;
+    width:auto;
+    left:0;
+    bottom:0;
+}
+.cover .capres2 {
+    position: absolute;
+    height:235px;
+    width:auto;
+    right:0;
+    bottom:0;
+}
+.logo{
+    position: absolute;
+    width:100%;
+    top:12%;
+    text-align: center;
+}
+
+.logo img{
+    width:100px;
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+@media (max-width: 550px) {
+    .cover .capres1 {
+        height:180px;
+    }
+    .cover .capres2 {
+        height:180px;
+    }
+    .logo{
+        top:15%;
+    }
+}
+
+.menu .tab{
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    top: 0px;
+    z-index: 20;
+    padding: 0px;
+    text-align: center;
+    min-width:540px;
+}
+.menu .tab ul {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: -6px;
+}
+.menu .tab ul li {
+    display: inline-block;
+    text-align: center;
+}
+.menu .tab ul li.active a {
+    background: rgba(159, 174, 187, 0.05);
+    margin-bottom: 0px;
+    border-bottom: 3px solid #ee4054;
+}
+.menu .tab ul li a {
+    color: #444444;
+    float: left;
+    text-decoration: none;
+    padding: 15px 25px 15px 25px;
+    margin-bottom: 3px;
+}
+.menu .tab ul li a:visited {
+    color: #444444;
+}
+.menu .tab ul li a:hover,
+.menu .tab ul li .current {
+    color: #333333;
+    background: rgba(159, 174, 187, 0.05);
+    margin-bottom: 0px;
+    border-bottom: 3px solid #40abee;
+}
+
+/* WEBKIT SCROLLBAR */
+::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #D7402C; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(106, 106, 106, 0.4); 
+}
+/* END OF WEBKIT SCROLLBAR */
+.versus {
+    position: relative;   
+}
+.versus .title {
+    text-align: center;
+    background: #fff;
+    width:100%;
+    padding: 0px;
+}
+
+.versus .title h4 {
+    padding-top: 8px;
+    padding-bottom:  15px;
+    border-bottom: 1px solid #eee;   
+    margin-bottom: 0px;
+}
+
+.versus .content {
+    background: #fff;
+    min-width:480px;
+    overflow-y: scroll;
+}
+
+.versus .content .content1 {
+    background: #fff;
+    position: absolute;
+    width:50%;
+    left:0;
+    padding:0px;
+    text-align: justify;
+}
+
+.versus .content .content1 p {
+    border-right: solid 1px #eee;   
+}
+.versus .content .content2 {
+    background: #fff;
+    position: absolute;
+    width:50%;
+    right:0;
+    padding:0px;
+    text-align: justify;
+}
+
+.versus .content div .kiri,
+.versus .content div .kanan {
+    padding: 10px; 
+}
+
+.about {
+    padding-top: 10px;
+    width:100%;
+    height:110px;
+    background: #333;
+    border-right: solid 1px #333;
+    color:#fff;
+    font-size: 12px;
+}
+
+.about span {
+    margin:10px;   
+}
+
+.btn-coblos {
+    position: fixed;
+    bottom:15px;
+    right:15px;
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    background: #34b41f;
+    color:#fff !important;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    padding-top: 12px;
+    -webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+btn-coblos i {
+   margin: auto;
+}  
